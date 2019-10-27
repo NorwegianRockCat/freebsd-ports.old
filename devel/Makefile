@@ -124,6 +124,11 @@
     SUBDIR += antlr3
     SUBDIR += antlr4
     SUBDIR += apache-ant
+    SUBDIR += apache-commons-configuration
+    SUBDIR += apache-commons-daemon
+    SUBDIR += apache-commons-io
+    SUBDIR += apache-commons-jxpath
+    SUBDIR += apache-commons-modeler
     SUBDIR += apache-rat
     SUBDIR += aphpbreakdown
     SUBDIR += aphpunit
@@ -172,7 +177,6 @@
     SUBDIR += atf
     SUBDIR += atlas
     SUBDIR += atlas-devel
-    SUBDIR += atlassian-plugin-sdk
     SUBDIR += aunit
     SUBDIR += autobook
     SUBDIR += autoconf
@@ -223,7 +227,6 @@
     SUBDIR += bicyclerepair
     SUBDIR += bin86
     SUBDIR += binaryen
-    SUBDIR += bingo
     SUBDIR += bingrep
     SUBDIR += binutils
     SUBDIR += bison
@@ -500,7 +503,6 @@
     SUBDIR += double-conversion
     SUBDIR += doxygen
     SUBDIR += dparser
-    SUBDIR += dprog
     SUBDIR += dragon
     SUBDIR += dreampie
     SUBDIR += drpython
@@ -518,7 +520,6 @@
     SUBDIR += eastl
     SUBDIR += easygit
     SUBDIR += easyloggingpp
-    SUBDIR += eblob
     SUBDIR += ebnf2yacc
     SUBDIR += ecgi
     SUBDIR += editline
@@ -532,7 +533,6 @@
     SUBDIR += elfkickers
     SUBDIR += elfrc
     SUBDIR += elfsh
-    SUBDIR += elftoaout
     SUBDIR += elfutils
     SUBDIR += elixir-apex
     SUBDIR += elixir-bson
@@ -634,6 +634,7 @@
     SUBDIR += etcd31
     SUBDIR += etcd32
     SUBDIR += etcd33
+    SUBDIR += etcd34
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += evdev-proto
@@ -648,9 +649,7 @@
     SUBDIR += fb-adb
     SUBDIR += fb303
     SUBDIR += fc++
-    SUBDIR += fga
     SUBDIR += fhist
-    SUBDIR += fib
     SUBDIR += fifechan
     SUBDIR += firmware-utils
     SUBDIR += fistgen
@@ -663,7 +662,6 @@
     SUBDIR += flex-sdk35
     SUBDIR += flexdock
     SUBDIR += flexjson
-    SUBDIR += flickrnet
     SUBDIR += florist-gpl
     SUBDIR += flyspray
     SUBDIR += fmake
@@ -713,8 +711,6 @@
     SUBDIR += ftjam
     SUBDIR += ftnchek
     SUBDIR += fuel
-    SUBDIR += fujaba
-    SUBDIR += funnelweb
     SUBDIR += fuzzylite
     SUBDIR += fxdiv
     SUBDIR += ga
@@ -784,7 +780,6 @@
     SUBDIR += generate
     SUBDIR += gengetopt
     SUBDIR += genie
-    SUBDIR += genproto
     SUBDIR += gettext
     SUBDIR += gettext-lint
     SUBDIR += gettext-msghack
@@ -826,7 +821,6 @@
     SUBDIR += gitlist
     SUBDIR += gitolite
     SUBDIR += gitolite2
-    SUBDIR += gitphp
     SUBDIR += gittrac
     SUBDIR += glade
     SUBDIR += glade2
@@ -844,7 +838,6 @@
     SUBDIR += glui
     SUBDIR += gmake
     SUBDIR += gn
-    SUBDIR += gnatcoll
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
     SUBDIR += gnome-common
@@ -1026,11 +1019,6 @@
     SUBDIR += itext
     SUBDIR += ivykis
     SUBDIR += iz
-    SUBDIR += jakarta-commons-configuration
-    SUBDIR += jakarta-commons-daemon
-    SUBDIR += jakarta-commons-io
-    SUBDIR += jakarta-commons-jxpath
-    SUBDIR += jakarta-commons-modeler
     SUBDIR += jam
     SUBDIR += jansson
     SUBDIR += java-findbugs
@@ -1103,7 +1091,6 @@
     SUBDIR += kf5-kunitconversion
     SUBDIR += kf5-solid
     SUBDIR += kf5-threadweaver
-    SUBDIR += kimwitu
     SUBDIR += kio-extras
     SUBDIR += kiwix-lib
     SUBDIR += kms-cmake-utils
@@ -1234,7 +1221,6 @@
     SUBDIR += libgee06
     SUBDIR += libgetline
     SUBDIR += libght
-    SUBDIR += libghthash
     SUBDIR += libgit2
     SUBDIR += libgit2-glib
     SUBDIR += libglade2
@@ -1497,7 +1483,6 @@
     SUBDIR += lpc21isp
     SUBDIR += lrmi
     SUBDIR += lua-MessagePack
-    SUBDIR += lua-alien
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
     SUBDIR += lua-cjson
@@ -1523,6 +1508,7 @@
     SUBDIR += luafilesystem-51
     SUBDIR += luajava
     SUBDIR += lutok
+    SUBDIR += luv
     SUBDIR += lwp
     SUBDIR += lxqt-build-tools
     SUBDIR += m17n-db
@@ -1582,7 +1568,6 @@
     SUBDIR += mono-addins
     SUBDIR += monodevelop
     SUBDIR += monotone
-    SUBDIR += monotone-viz
     SUBDIR += motor
     SUBDIR += mpatrol
     SUBDIR += mph
@@ -1620,7 +1605,6 @@
     SUBDIR += nlohmann-json
     SUBDIR += node-thrift
     SUBDIR += notify-sharp
-    SUBDIR += noweb
     SUBDIR += npth
     SUBDIR += nsgenbind
     SUBDIR += nspr
@@ -3677,7 +3661,6 @@
     SUBDIR += p5-true
     SUBDIR += p5-uni-perl
     SUBDIR += p5-version
-    SUBDIR += p65
     SUBDIR += p8-platform
     SUBDIR += packr
     SUBDIR += paexec
@@ -4353,6 +4336,7 @@
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
     SUBDIR += py-crank
+    SUBDIR += py-crc32c
     SUBDIR += py-crcmod
     SUBDIR += py-ctags
     SUBDIR += py-cuisine
@@ -4440,7 +4424,6 @@
     SUBDIR += py-fastnumbers
     SUBDIR += py-fbprophet
     SUBDIR += py-filemagic
-    SUBDIR += py-fileutils
     SUBDIR += py-first
     SUBDIR += py-five.customerize
     SUBDIR += py-five.formlib
@@ -4509,6 +4492,7 @@
     SUBDIR += py-gobject
     SUBDIR += py-gobject3
     SUBDIR += py-google-apputils
+    SUBDIR += py-google-cloud-iam
     SUBDIR += py-google-i18n-address
     SUBDIR += py-google-pasta
     SUBDIR += py-googleapis-common-protos
@@ -4582,6 +4566,7 @@
     SUBDIR += py-jep
     SUBDIR += py-jinja2-time
     SUBDIR += py-jira
+    SUBDIR += py-jitterentropy
     SUBDIR += py-jmespath
     SUBDIR += py-joblib
     SUBDIR += py-jsbeautifier
@@ -4668,7 +4653,6 @@
     SUBDIR += py-medikit
     SUBDIR += py-meliae
     SUBDIR += py-memory_profiler
-    SUBDIR += py-mercurialserver
     SUBDIR += py-microversion-parse
     SUBDIR += py-minimongo
     SUBDIR += py-minio
@@ -4815,7 +4799,6 @@
     SUBDIR += py-posix_ipc
     SUBDIR += py-poyo
     SUBDIR += py-pp
-    SUBDIR += py-pqueue
     SUBDIR += py-prance
     SUBDIR += py-pre-commit
     SUBDIR += py-preshed
@@ -4909,6 +4892,7 @@
     SUBDIR += py-pytest
     SUBDIR += py-pytest-aiohttp
     SUBDIR += py-pytest-asyncio
+    SUBDIR += py-pytest-azurepipelines
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cov
@@ -5323,7 +5307,6 @@
     SUBDIR += pymacs
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5
-    SUBDIR += pypersrc
     SUBDIR += pyrex
     SUBDIR += pyside2
     SUBDIR += pyside2-tools
@@ -5405,16 +5388,15 @@
     SUBDIR += robin-map
     SUBDIR += roboctl
     SUBDIR += robodoc
-    SUBDIR += root-doc
     SUBDIR += ros-catkin_pkg
     SUBDIR += ros-console_bridge
-    SUBDIR += ros-urdfdom
-    SUBDIR += ros-urdfdom_headers
     SUBDIR += ros-rosdep
     SUBDIR += ros-rosdistro
     SUBDIR += ros-rosinstall
     SUBDIR += ros-rosinstall_generator
     SUBDIR += ros-rospkg
+    SUBDIR += ros-urdfdom
+    SUBDIR += ros-urdfdom_headers
     SUBDIR += ros-vcstools
     SUBDIR += ros-wstool
     SUBDIR += rote
@@ -5905,6 +5887,7 @@
     SUBDIR += rubygem-graphql
     SUBDIR += rubygem-graphql-docs
     SUBDIR += rubygem-grit
+    SUBDIR += rubygem-grpc-google-iam-v1
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
     SUBDIR += rubygem-hamster
@@ -6045,6 +6028,7 @@
     SUBDIR += rubygem-nprogress-rails
     SUBDIR += rubygem-nsa-rails5
     SUBDIR += rubygem-numerizer
+    SUBDIR += rubygem-numerizer01
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
     SUBDIR += rubygem-omniauth_crowd
@@ -6318,6 +6302,7 @@
     SUBDIR += rubygem-typed-array
     SUBDIR += rubygem-tzinfo
     SUBDIR += rubygem-tzinfo-data
+    SUBDIR += rubygem-tzinfo1
     SUBDIR += rubygem-uber
     SUBDIR += rubygem-unicode
     SUBDIR += rubygem-unicode-display_width
@@ -6382,7 +6367,6 @@
     SUBDIR += sedsed
     SUBDIR += serd
     SUBDIR += serdisplib
-    SUBDIR += sfio
     SUBDIR += sfml
     SUBDIR += sfml1
     SUBDIR += sgb
@@ -6430,6 +6414,7 @@
     SUBDIR += spatialindex
     SUBDIR += spdlog
     SUBDIR += spice-protocol
+    SUBDIR += spin
     SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += spread-sheet-widget
@@ -6449,7 +6434,6 @@
     SUBDIR += strace
     SUBDIR += stringencoders
     SUBDIR += stxxl
-    SUBDIR += styx
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-lts
@@ -6482,7 +6466,6 @@
     SUBDIR += tcllauncher
     SUBDIR += tcllib
     SUBDIR += tcllibc
-    SUBDIR += tclmore
     SUBDIR += tcloo
     SUBDIR += tclreadline
     SUBDIR += tclthread
@@ -6539,7 +6522,6 @@
     SUBDIR += uid_wrapper
     SUBDIR += ultragetopt
     SUBDIR += umbrello
-    SUBDIR += umem
     SUBDIR += umlgraph
     SUBDIR += unibilium
     SUBDIR += unittest-cpp
@@ -6578,6 +6560,7 @@
     SUBDIR += wxGlade
     SUBDIR += wxformbuilder
     SUBDIR += xa65
+    SUBDIR += xbyak
     SUBDIR += xc3sprog
     SUBDIR += xdg-user-dirs
     SUBDIR += xdg-utils
