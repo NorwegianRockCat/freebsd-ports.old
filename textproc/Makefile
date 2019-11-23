@@ -1481,12 +1481,14 @@
     SUBDIR += ruby-xmlparser
     SUBDIR += rubygem-actionpack-xml_parser
     SUBDIR += rubygem-actionpack-xml_parser1
+    SUBDIR += rubygem-actionpack-xml_parser52
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml009
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1509,11 +1511,11 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-diff-lcs
+    SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-diffy31
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
-    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-elasticsearch-api
     SUBDIR += rubygem-elasticsearch-api503
     SUBDIR += rubygem-elasticsearch-dsl
@@ -1525,6 +1527,7 @@
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-elasticsearch-transport503
     SUBDIR += rubygem-elasticsearch-xpack
+    SUBDIR += rubygem-elasticsearch503
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils
     SUBDIR += rubygem-escape_utils11
@@ -1609,6 +1612,7 @@
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge2
+    SUBDIR += rubygem-rouge312
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt

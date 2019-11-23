@@ -270,7 +270,6 @@
     SUBDIR += perl5.30
     SUBDIR += petite-chez
     SUBDIR += pfe
-    SUBDIR += purescript
     SUBDIR += pharo
     SUBDIR += phc
     SUBDIR += php-mode.el
@@ -288,6 +287,7 @@
     SUBDIR += polyml
     SUBDIR += ponyc
     SUBDIR += ptoc
+    SUBDIR += purescript
     SUBDIR += py-hy
     SUBDIR += py-mx-base
     SUBDIR += py-prolog
@@ -355,6 +355,7 @@
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
+    SUBDIR += spidermonkey60
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

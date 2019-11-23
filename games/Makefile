@@ -208,6 +208,7 @@
     SUBDIR += doom-wolfendoom
     SUBDIR += doomlegacy
     SUBDIR += doomsday
+    SUBDIR += dreamchess
     SUBDIR += drm
     SUBDIR += duckmaze
     SUBDIR += duel
@@ -547,6 +548,7 @@
     SUBDIR += mahjong
     SUBDIR += maitretarot
     SUBDIR += manaplus
+    SUBDIR += mancala
     SUBDIR += mangband
     SUBDIR += mari0
     SUBDIR += marsnomercy

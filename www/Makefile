@@ -427,6 +427,7 @@
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += moodle37
+    SUBDIR += moodle38
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -458,6 +459,7 @@
     SUBDIR += nift
     SUBDIR += node
     SUBDIR += node10
+    SUBDIR += node12
     SUBDIR += node8
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -466,6 +468,7 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node10
+    SUBDIR += npm-node12
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
@@ -1445,6 +1448,7 @@
     SUBDIR += py-collective.easytemplate
     SUBDIR += py-collective.templateengines
     SUBDIR += py-cookies
+    SUBDIR += py-crossplane
     SUBDIR += py-css-parser
     SUBDIR += py-csscompressor
     SUBDIR += py-cssmin
@@ -1469,6 +1473,7 @@
     SUBDIR += py-dj22-django-auth-ldap
     SUBDIR += py-dj22-django-cacheops
     SUBDIR += py-dj22-django-cors-headers
+    SUBDIR += py-dj22-django-crispy-forms
     SUBDIR += py-dj22-django-debug-toolbar
     SUBDIR += py-dj22-django-filter
     SUBDIR += py-dj22-django-formset-js-improved
@@ -1914,6 +1919,7 @@
     SUBDIR += redmine-sidebar_hide
     SUBDIR += redmine-single_auth
     SUBDIR += redmine-wiki_notes
+    SUBDIR += redmine4
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
@@ -2110,7 +2116,6 @@
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
-    SUBDIR += rubygem-rack-attack44
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
@@ -2157,7 +2162,6 @@
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
     SUBDIR += rubygem-responders-rails52
-    SUBDIR += rubygem-responders2-rails52
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2466,6 +2470,7 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node10
+    SUBDIR += yarn-node12
     SUBDIR += yarn-node8
     SUBDIR += yaws
     SUBDIR += you-get
