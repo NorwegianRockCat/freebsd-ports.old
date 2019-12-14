@@ -57,6 +57,7 @@
     SUBDIR += kicad-library-templates
     SUBDIR += kicad-library-templates-devel
     SUBDIR += klayout
+    SUBDIR += ktechlab
     SUBDIR += ldraw
     SUBDIR += leocad
     SUBDIR += lepton-eda
@@ -76,6 +77,7 @@
     SUBDIR += openscad
     SUBDIR += openscad-devel
     SUBDIR += openvsp
+    SUBDIR += oregano
     SUBDIR += p5-GDS2
     SUBDIR += p5-Verilog-Perl
     SUBDIR += pcb

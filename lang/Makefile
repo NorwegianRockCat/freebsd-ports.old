@@ -104,7 +104,6 @@
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc7
-    SUBDIR += gcc7-devel
     SUBDIR += gcc8
     SUBDIR += gcc8-devel
     SUBDIR += gcc9
@@ -145,6 +144,7 @@
     SUBDIR += icc
     SUBDIR += ici
     SUBDIR += icon
+    SUBDIR += intel-compute-runtime
     SUBDIR += intercal
     SUBDIR += io
     SUBDIR += io-devel
@@ -376,6 +376,7 @@
     SUBDIR += twelf
     SUBDIR += ucc
     SUBDIR += urweb
+    SUBDIR += v
     SUBDIR += v8
     SUBDIR += vala
     SUBDIR += visualworks

@@ -603,7 +603,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # test-depends-list
 #				- Show all directories which are test-dependencies
 #				  for this port.
-#
+# install-missing-packages
+#               - Install missing dependencies from package and mark
+#                 them as automatically installed 
 # extract		- Unpacks ${DISTFILES} into ${WRKDIR}.
 # patch			- Apply any provided patches to the source.
 # configure		- Runs either GNU configure, one or more local configure
@@ -1125,6 +1127,16 @@ HOSTARCH:=	${ARCH}
 ARCH=	${CROSS_TOOLCHAIN:C,-.*$,,}
 .endif
 _EXPORTED_VARS+=	ARCH
+
+.if ${ARCH} == powerpc64
+.  if !defined(PPC_ABI)
+PPC_ABI!=	${CC} -dM -E - < /dev/null | ${AWK} '/_CALL_ELF/{print "ELFv"$$3}'
+.    if ${PPC_ABI} != ELFv2
+PPC_ABI=	ELFv1
+.    endif
+.  endif
+_EXPORTED_VARS+=	PPC_ABI
+.endif
 
 # Get operating system versions for a cross build
 .if defined(CROSS_SYSROOT)
@@ -4308,6 +4320,11 @@ missing-packages:
 			${ECHO_CMD} $${_p}; \
 		fi; \
 	done
+
+# Install missing dependencies from package
+install-missing-packages:
+	@_dirs=$$(${MISSING-DEPENDS-LIST}); \
+	${PKG_BIN} install -A $$(${ECHO} $${_dirs} | ${SED} "s%${PORTSDIR}/%%g")
 
 ################################################################
 # Everything after here are internal targets and really
