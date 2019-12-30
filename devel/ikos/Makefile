@@ -3,6 +3,7 @@
 PORTNAME=	ikos
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,7 +22,6 @@ LIB_DEPENDS=	libapron.so:math/apron \
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
 USES=		cmake ncurses python:3.6+ sqlite
-USE_PYTHON=	py3kplist
 USE_GITHUB=	yes
 GH_ACCOUNT=	NASA-SW-VnV
 USE_LDCONFIG=	yes
