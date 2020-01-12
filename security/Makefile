@@ -318,16 +318,6 @@
     SUBDIR += libwhisker
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
-    SUBDIR += linux-c6-audit-libs
-    SUBDIR += linux-c6-cyrus-sasl2
-    SUBDIR += linux-c6-gnutls
-    SUBDIR += linux-c6-libgcrypt
-    SUBDIR += linux-c6-libgpg-error
-    SUBDIR += linux-c6-libssh2
-    SUBDIR += linux-c6-libtasn1
-    SUBDIR += linux-c6-nss
-    SUBDIR += linux-c6-openssl
-    SUBDIR += linux-c6-pam
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -414,7 +404,6 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-unsafe
-    SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -528,6 +517,7 @@
     SUBDIR += p5-Crypt-GeneratePassword
     SUBDIR += p5-Crypt-HCE_MD5
     SUBDIR += p5-Crypt-HCE_SHA
+    SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
     SUBDIR += p5-Crypt-Juniper

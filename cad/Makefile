@@ -12,12 +12,12 @@
     SUBDIR += astk-serveur
     SUBDIR += atlc
     SUBDIR += basicdsp
-    SUBDIR += brickutils
     SUBDIR += brlcad
     SUBDIR += calculix
     SUBDIR += calculix-ccx
     SUBDIR += caneda
     SUBDIR += cascade
+    SUBDIR += cascade-compiler
     SUBDIR += chipvault
     SUBDIR += cura-engine
     SUBDIR += digital
@@ -34,6 +34,7 @@
     SUBDIR += gdsreader
     SUBDIR += gdt
     SUBDIR += geda
+    SUBDIR += gerbv
     SUBDIR += ghdl
     SUBDIR += gmsh
     SUBDIR += gnucap
@@ -108,6 +109,7 @@
     SUBDIR += verilator
     SUBDIR += verilog-mode.el
     SUBDIR += xcircuit
+    SUBDIR += yosys
     SUBDIR += z88
     SUBDIR += zcad
 
