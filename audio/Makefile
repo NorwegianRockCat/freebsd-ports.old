@@ -108,7 +108,6 @@
     SUBDIR += deadbeef-spectrogram-plugin
     SUBDIR += deadbeef-vu-meter-plugin
     SUBDIR += deadbeef-waveform-seekbar-plugin
-    SUBDIR += decibel-audio-player
     SUBDIR += dekagen
     SUBDIR += denemo
     SUBDIR += discid
@@ -335,7 +334,6 @@
     SUBDIR += id3ren
     SUBDIR += id3tool
     SUBDIR += id3v2
-    SUBDIR += idjc
     SUBDIR += ifp-line
     SUBDIR += infamous-plugins-lv2
     SUBDIR += invada-studio-plugins-lv2
@@ -669,7 +667,6 @@
     SUBDIR += py-soundscrape
     SUBDIR += py-speechrecognition
     SUBDIR += py-tagpy
-    SUBDIR += py-vorbis
     SUBDIR += py-wavio
     SUBDIR += py-webrtcvad
     SUBDIR += py-xmms2
@@ -680,7 +677,6 @@
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
-    SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
     SUBDIR += rebot3
@@ -725,7 +721,6 @@
     SUBDIR += shntool
     SUBDIR += shorten
     SUBDIR += shout
-    SUBDIR += shout-idjc
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
@@ -740,7 +735,6 @@
     SUBDIR += sonic-visualiser
     SUBDIR += sorcer-lv2
     SUBDIR += sound-juicer
-    SUBDIR += soundconverter
     SUBDIR += soundgrab
     SUBDIR += soundkonverter
     SUBDIR += soundtouch

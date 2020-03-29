@@ -10,6 +10,7 @@
     SUBDIR += Sockets
     SUBDIR += activemq
     SUBDIR += adasockets
+    SUBDIR += addrwatch
     SUBDIR += afpfs-ng
     SUBDIR += aget
     SUBDIR += akonadi-calendar
@@ -155,6 +156,7 @@
     SUBDIR += fb
     SUBDIR += fiche
     SUBDIR += file2pcap
+    SUBDIR += findomain
     SUBDIR += findmtu
     SUBDIR += flent
     SUBDIR += flower
@@ -343,9 +345,11 @@
     SUBDIR += ldapsh
     SUBDIR += leproxy
     SUBDIR += lft
+    SUBDIR += libarcus
     SUBDIR += libarms
     SUBDIR += libbgpdump
     SUBDIR += libcapn
+    SUBDIR += libcharon
     SUBDIR += libcmis
     SUBDIR += libcoap
     SUBDIR += libdaq
@@ -434,6 +438,7 @@
     SUBDIR += mailcommon
     SUBDIR += mailimporter
     SUBDIR += malo-firmware-kmod
+    SUBDIR += mcjoin
     SUBDIR += mdns-repeater
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
@@ -889,7 +894,6 @@
     SUBDIR += p5-XMLRPC-Lite
     SUBDIR += p5-XPC
     SUBDIR += p5-ZMQ-FFI
-    SUBDIR += p5-ZeroMQ
     SUBDIR += p5-ip2location-perl
     SUBDIR += p5-ldap2pf
     SUBDIR += p5-ldap2pw
@@ -1044,7 +1048,6 @@
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
     SUBDIR += py-ldappool
-    SUBDIR += py-ldaptor
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libfte
@@ -1088,6 +1091,7 @@
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
+    SUBDIR += py-python-cinderclient5
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
@@ -1136,7 +1140,6 @@
     SUBDIR += py-wmi-query
     SUBDIR += py-wolframalpha
     SUBDIR += py-wsproto
-    SUBDIR += py-xmlrpc
     SUBDIR += py-zeep
     SUBDIR += py-zeroconf
     SUBDIR += py-zope.proxy
@@ -1468,6 +1471,7 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traefik
+    SUBDIR += traefik2
     SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3
@@ -1478,11 +1482,12 @@
     SUBDIR += tshark
     SUBDIR += tshark-lite
     SUBDIR += tsocks
-    SUBDIR += tucan
+    SUBDIR += tunneller
     SUBDIR += turnserver
     SUBDIR += twitux
     SUBDIR += u6rd
     SUBDIR += ucarp
+    SUBDIR += udpbroadcastrelay
     SUBDIR += udptunnel
     SUBDIR += udpxy
     SUBDIR += udt

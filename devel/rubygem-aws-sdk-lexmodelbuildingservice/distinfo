@@ -1,3 +1,3 @@
-TIMESTAMP = 1578117411
-SHA256 (rubygem/aws-sdk-lexmodelbuildingservice-1.25.0.gem) = 66d2d2c2bedd877da87b4619b841d527669ffd25b46db96822077846b89583b9
-SIZE (rubygem/aws-sdk-lexmodelbuildingservice-1.25.0.gem) = 57344
+TIMESTAMP = 1585076445
+SHA256 (rubygem/aws-sdk-lexmodelbuildingservice-1.27.0.gem) = 670eff4122f967f51c6ccab19e2467c0ba0a5952bccad604dd643a2571f3fec8
+SIZE (rubygem/aws-sdk-lexmodelbuildingservice-1.27.0.gem) = 59904
