@@ -2,7 +2,8 @@
 
 PORTNAME=	pcl
 DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	1.10.1
+DISTVERSION=	1.11.1
+PORTREVISION=	1
 CATEGORIES=	graphics math
 PKGNAMESUFFIX=	-pointclouds
 
@@ -47,14 +48,14 @@ PNG_LIB_DEPENDS=	libpng.so:graphics/png
 
 QHULL_DESC=		Include convex-hull operations
 QHULL_CMAKE_BOOL=	WITH_QHULL
-QHULL_LIB_DEPENDS=	libqhull.so:math/qhull5
+QHULL_LIB_DEPENDS=	libqhull.so:math/qhull
 
 QT5_CMAKE_BOOL=		WITH_QT
 QT5_BROKEN=		WITH_QT doesn't do anything, should be used by apps, but apps is also broken: see https://github.com/PointCloudLibrary/pcl/issues/2642
 
 VTK_DESC=		Build VTK-Visualizations
 VTK_CMAKE_BOOL=		WITH_VTK
-VTK_LIB_DEPENDS=	libvtkCommonCore-8.1.so:math/vtk8
+VTK_LIB_DEPENDS=	libvtkCommonCore-8.2.so:math/vtk8
 VTK_BROKEN=		VTK has missing ompxx symbols: https://gitlab.kitware.com/vtk/vtk/issues/17444
 
 .include <bsd.port.pre.mk>

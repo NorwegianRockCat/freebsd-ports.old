@@ -5,6 +5,9 @@ PORTNAME=	csound
 DISTVERSION=	6.14.0
 CATEGORIES=	audio lang
 
+PATCH_SITES=	https://github.com/csound/csound/commit/
+PATCHFILES=	c444e8f752c3acc31d364b901204e09eae2e791e.patch:-p1
+
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Sound synthesizer
 
@@ -12,7 +15,7 @@ LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
-		swig3.0:devel/swig30 \
+		swig:devel/swig \
 		gmm++>0:math/gmm++
 LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile
@@ -30,7 +33,6 @@ CMAKE_ARGS=	-DBUILD_CSOUNDVST:BOOL=OFF \
 		-DOPSYS:STRING="${OPSYS}"
 CMAKE_OFF=	USE_ALSA BUILD_JAVA_INTERFACE BUILD_TESTS
 SSP_UNSAFE=	yes
-BINARY_ALIAS=	swig=swig3.0
 LDFLAGS+=	-lexecinfo
 
 SUB_FILES=	pkg-message

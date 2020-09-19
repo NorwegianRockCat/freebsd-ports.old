@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	libuv
-PORTVERSION=	1.35.0
+PORTVERSION=	1.39.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
-MAINTAINER=	thierry@FreeBSD.org
+MAINTAINER=	bhughes@FreeBSD.org
 COMMENT=	Multi-platform support library with a focus on asynchronous I/O
 
 LICENSE=	NODE
@@ -16,11 +16,10 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USE_GITHUB=	yes
 
-USES=		autoreconf libtool pathfix pkgconfig python:test shebangfix
+USES=		autoreconf libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
-SHEBANG_FILES=	gyp_uv.py
 
 TEST_TARGET=	check
 

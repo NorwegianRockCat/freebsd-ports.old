@@ -10,7 +10,6 @@
     SUBDIR += anyremote
     SUBDIR += apitran
     SUBDIR += aprsd
-    SUBDIR += ath3k-firmware
     SUBDIR += atslog
     SUBDIR += bfhist
     SUBDIR += bforce-kst
@@ -23,7 +22,6 @@
     SUBDIR += chu
     SUBDIR += comserv
     SUBDIR += concordance
-    SUBDIR += congruity
     SUBDIR += conserver-com
     SUBDIR += cqrlog
     SUBDIR += cubicsdr
@@ -54,7 +52,6 @@
     SUBDIR += flwrap
     SUBDIR += freedv
     SUBDIR += gammu
-    SUBDIR += geoid
     SUBDIR += gkermit
     SUBDIR += gnocky
     SUBDIR += gnokii
@@ -74,11 +71,9 @@
     SUBDIR += inspectrum
     SUBDIR += iwmbt-firmware
     SUBDIR += java-simple-serial-connector
-    SUBDIR += jerm
     SUBDIR += kb
     SUBDIR += kermit
     SUBDIR += klog
-    SUBDIR += libbtbb
     SUBDIR += libconcord
     SUBDIR += libfap
     SUBDIR += libfec
@@ -110,6 +105,9 @@
     SUBDIR += nmealib
     SUBDIR += o2sms
     SUBDIR += obexapp
+    SUBDIR += opencbm
+    SUBDIR += opencbm-kmod
+    SUBDIR += opencbm-plugin-xa1541
     SUBDIR += openobex
     SUBDIR += openzwave
     SUBDIR += openzwave-devel
@@ -137,14 +135,12 @@
     SUBDIR += pr
     SUBDIR += predict
     SUBDIR += py-adafruit-ampy
-    SUBDIR += py-bulksms
     SUBDIR += py-esptool
-    SUBDIR += py-gammu
     SUBDIR += py-hidapi
     SUBDIR += py-libconcord
     SUBDIR += py-lirc
+    SUBDIR += py-pyserial
     SUBDIR += py-qt5-serialport
-    SUBDIR += py-serial
     SUBDIR += py-xmodem
     SUBDIR += pyla
     SUBDIR += qico
@@ -156,7 +152,6 @@
     SUBDIR += qt5-serialbus
     SUBDIR += qt5-serialport
     SUBDIR += qtel
-    SUBDIR += quisk
     SUBDIR += redsea
     SUBDIR += remserial
     SUBDIR += rtl-sdr
@@ -217,7 +212,6 @@
     SUBDIR += xmorse
     SUBDIR += xnec2c
     SUBDIR += xnecview
-    SUBDIR += yaac
     SUBDIR += yagiuda
     SUBDIR += yaps
     SUBDIR += yfklog

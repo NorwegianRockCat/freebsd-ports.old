@@ -7,7 +7,7 @@ PORTEPOCH=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
@@ -24,8 +24,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
-VALA_VER=	${PORTVERSION:R}
-
-PLIST_SUB=	VERSION=0.40
+PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 .include <bsd.port.mk>

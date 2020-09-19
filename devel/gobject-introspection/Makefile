@@ -3,12 +3,13 @@
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.56.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
 
 LICENSE=	GPLv2+ LGPL20+

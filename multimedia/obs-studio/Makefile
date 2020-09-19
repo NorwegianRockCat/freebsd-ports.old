@@ -1,11 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	obs-studio
-DISTVERSION=	25.0.3
+DISTVERSION=	26.0.0-rc1
+PORTREVISION=	1
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	e1de4e8a50b5e50f69214d3a4fd39b4b9b03e050.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source streaming/recording software
@@ -16,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BROKEN_aarch64=	Fails to compile: invalid conversion between vector type and integer type
 
 BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat \
-		swig3.0:devel/swig30
+		swig:devel/swig
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libcurl.so:ftp/curl \
 		libdbus-1.so:devel/dbus \
@@ -39,7 +37,7 @@ LIB_DEPENDS_armv7=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_i386=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
 
-USES=		cmake compiler:c++11-lib gl lua pkgconfig python:3.4+ qt:5 xorg
+USES=		cmake gl lua pkgconfig python:3.4+ qt:5 xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject
 USE_QT=		core gui svg widgets x11extras xml buildtools_build imageformats_run qmake_build
@@ -50,6 +48,16 @@ USE_LDCONFIG=	yes
 CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"
 CFLAGS+=	-D_WITH_GETLINE
+
+LDFLAGS+=	-fPIC # pending https://github.com/obsproject/obs-studio/issues/3436
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64
+USES+=		compiler:gcc-c++11-lib
+.else
+USES+=		compiler:c++11-lib
+.endif
 
 .include <bsd.port.pre.mk>
 
@@ -63,7 +71,11 @@ post-patch:
 	@${REINPLACE_CMD} -e 's| 3.4)| ${PYTHON_VER})|' \
 		${WRKSRC}/cmake/Modules/FindPythonDeps.cmake
 
-post-install: # https://github.com/obsproject/obs-studio/issues/2625
+post-install:
+	# https://github.com/obsproject/obs-studio/issues/2625
 	${INSTALL_DATA} ${WRKSRC}/UI/obs-frontend-api/obs-frontend-api.h ${STAGEDIR}${PREFIX}/include/obs
+	# https://github.com/obsproject/obs-studio/issues/2647 (only for multimedia/obs-audio-spectralizer, should be removed later)
+	${INSTALL_DATA} ${WRKSRC}/cmake/Modules/ObsHelpers.cmake ${STAGEDIR}${PREFIX}/lib/cmake
+	${INSTALL_DATA} ${WRKSRC}/cmake/external/ObsPluginHelpers.cmake ${STAGEDIR}${PREFIX}/lib/cmake
 
 .include <bsd.port.post.mk>

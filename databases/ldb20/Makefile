@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		ldb
-PORTVERSION=		2.0.9
+PORTVERSION=		2.0.10
 PORTREVISION=		0
 PORTEPOCH=		0
 CATEGORIES=		databases
@@ -11,7 +11,7 @@ PKGNAMESUFFIX?=		20
 MAINTAINER=		timur@FreeBSD.org
 COMMENT=		LDAP-like embedded database
 
-LICENSE=		GPLv3
+LICENSE=		GPLv3+
 
 IGNORE_NONTHREAD_PYTHON=needs port lang/python${PYTHON_SUFFIX} to be build with THREADS support
 
@@ -103,7 +103,7 @@ BUILD_DEPENDS+=		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:textproc/do
 .endif
 
 .if ! ${PORT_OPTIONS:MPYTHON3} || defined(NO_PYTHON)
-USES+=			python:2.7+,build,test
+USES+=			python:build,test
 CONFIGURE_ARGS+=	--disable-python
 .else
 USES+=			python:3.4+

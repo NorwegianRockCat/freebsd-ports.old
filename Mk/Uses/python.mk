@@ -20,7 +20,7 @@
 #
 #			USES=python:2.7		# Supports Python 2.7 Only
 #			USES=python:3.5+	# Supports Python 3.5 or later
-#			USES=python:3.5-3.7	# Supports Python 3.5 to 3.7
+#			USES=python:3.5-3.8	# Supports Python 3.5 to 3.8
 #			USES=python:-3.6	# Supports Python up to 3.6
 #			USES=python		# Supports any/all Python versions
 #
@@ -463,6 +463,11 @@ PYTHON_ABIVER=		m
 .endif
 .endif
 
+.if ${PYTHON_MAJOR_VER} == 2
+DEPRECATED?=	Uses Python 2.7 which is EOLed upstream
+EXPIRATION_DATE?=	2020-12-31
+.endif
+
 .if !defined(PYTHONBASE)
 PYTHONBASE!=	(${PYTHON_CMD} -c 'import sys; print(sys.prefix)' \
 			2> /dev/null || ${ECHO_CMD} ${LOCALBASE}) | ${TAIL} -1
@@ -591,7 +596,8 @@ _RELLIBDIR=		${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
 
 _USES_stage+=	934:add-plist-pymod
 add-plist-pymod:
-	@${SED} -e 's|^${STAGEDIR}${PREFIX}/||' \
+	@${SED} -e 's|^"\(.*\)"$$|\1|' \
+		-e 's|^${STAGEDIR}${PREFIX}/||' \
 		-e 's|^${PREFIX}/||' \
 		-e 's|^\(man/.*man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2.gz|' \
 		-e 's|^\(share/man/.*man[0-9]\)/\(.*\.[0-9]\)$$|\1/\2.gz|' \
@@ -627,14 +633,16 @@ CMAKE_ARGS+=	-DPython_ADDITIONAL_VERSIONS=${PYTHON_VER}
 
 # Python 3rd-party modules
 PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR}
-PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.15,1<1.19,1:math/py-numpy@${PY_FLAVOR}
+PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1<1.20,1:math/py-numpy@${PY_FLAVOR}
 
 # Common Python modules that can be needed but only for some versions of Python.
 .if ${PYTHON_REL} < 3500
 PY_PILLOW=	${PYTHON_PKGNAMEPREFIX}pillow6>=6.0.0:graphics/py-pillow6@${PY_FLAVOR}
-PY_TYPING=	${PYTHON_PKGNAMEPREFIX}typing>=3.7.4:devel/py-typing@${PY_FLAVOR}
+PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx18>=0:textproc/py-sphinx18@${PY_FLAVOR}
+PY_TYPING=	${PYTHON_PKGNAMEPREFIX}typing>=3.7.4.1:devel/py-typing@${PY_FLAVOR}
 .else
 PY_PILLOW=	${PYTHON_PKGNAMEPREFIX}pillow>=7.0.0:graphics/py-pillow@${PY_FLAVOR}
+PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx>=0:textproc/py-sphinx@${PY_FLAVOR}
 PY_TYPING=
 .endif
 
@@ -643,7 +651,7 @@ PY_ENUM34=	${PYTHON_PKGNAMEPREFIX}enum34>=1.1<2.0:devel/py-enum34@${PY_FLAVOR}
 PY_PATHLIB=	${PYTHON_PKGNAMEPREFIX}pathlib>0:devel/py-pathlib@${PY_FLAVOR}
 .else
 PY_ENUM34=
-PY_PATHLIB=	
+PY_PATHLIB=
 .endif
 
 .if ${PYTHON_REL} < 3300
@@ -656,6 +664,12 @@ PY_IPADDRESS=
 PY_FUTURES=	${PYTHON_PKGNAMEPREFIX}futures>=3.2:devel/py-futures@${PY_FLAVOR}
 .else
 PY_FUTURES=
+.endif
+
+.if ${PYTHON_VER} != ${PYTHON_DEFAULT}
+PY_MERCURIAL=	${PYTHON_PKGNAMEPREFIX}mercurial>=5.5:devel/mercurial@${PY_FLAVOR}
+.else
+PY_MERCURIAL=	mercurial>=5.5:devel/mercurial@${PY_FLAVOR}
 .endif
 
 CMAKE_ARGS+=	-DBOOST_PYTHON_SUFFIX:STRING=${PYTHON_SUFFIX}
