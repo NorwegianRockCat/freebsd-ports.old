@@ -1,10 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	bfs
-DISTVERSION=	1.6
+DISTVERSION=	1.7
 CATEGORIES=	sysutils
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Breadth-first version of the UNIX find command
 
 LICENSE=	BSD0CLAUSE

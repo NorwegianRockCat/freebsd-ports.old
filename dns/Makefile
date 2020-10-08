@@ -7,12 +7,10 @@
     SUBDIR += adsuck
     SUBDIR += amass
     SUBDIR += ares
-    SUBDIR += autotrust
     SUBDIR += axfr2acl
     SUBDIR += bind-tools
     SUBDIR += bind9-devel
     SUBDIR += bind911
-    SUBDIR += bind914
     SUBDIR += bind916
     SUBDIR += bindgraph
     SUBDIR += bundy
@@ -37,6 +35,7 @@
     SUBDIR += dnsblast
     SUBDIR += dnscap
     SUBDIR += dnscheckengine
+    SUBDIR += dnscontrol
     SUBDIR += dnscrypt-proxy2
     SUBDIR += dnscrypt-wrapper
     SUBDIR += dnsdbck
@@ -48,9 +47,7 @@
     SUBDIR += dnshistory
     SUBDIR += dnsjava
     SUBDIR += dnsmasq
-    SUBDIR += dnsmasq-devel
     SUBDIR += dnsmax-perl
-    SUBDIR += dnsperf
     SUBDIR += dnsproxy
     SUBDIR += dnsrecon
     SUBDIR += dnsreflector
@@ -74,7 +71,6 @@
     SUBDIR += firedns
     SUBDIR += flamethrower
     SUBDIR += fpdns
-    SUBDIR += gdnsd
     SUBDIR += gdnsd2
     SUBDIR += gdnsd3
     SUBDIR += gen6dns
@@ -92,7 +88,8 @@
     SUBDIR += knock
     SUBDIR += knot-resolver
     SUBDIR += knot2
-    SUBDIR += knot2-lib
+    SUBDIR += knot3
+    SUBDIR += knot3-lib
     SUBDIR += ldapdns
     SUBDIR += ldns
     SUBDIR += libasr
@@ -113,7 +110,6 @@
     SUBDIR += nextdns
     SUBDIR += noip
     SUBDIR += nsd
-    SUBDIR += nsec3walker
     SUBDIR += nslint
     SUBDIR += nsnotifyd
     SUBDIR += nsping
@@ -169,7 +165,6 @@
     SUBDIR += p5-POE-Component-Resolver
     SUBDIR += p5-POE-Component-Server-DNS
     SUBDIR += p5-POE-Filter-DNS-TCP
-    SUBDIR += p5-Stanford-DNSserver
     SUBDIR += p5-Tie-DNS
     SUBDIR += p5-URBL-Prepare
     SUBDIR += packetq
@@ -185,12 +180,10 @@
     SUBDIR += py-cloudflare
     SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
-    SUBDIR += py-dnschain
     SUBDIR += py-dnspython
     SUBDIR += py-easyzone
     SUBDIR += py-idna
     SUBDIR += py-idna_ssl
-    SUBDIR += py-idnkit2
     SUBDIR += py-ldns
     SUBDIR += py-localzone
     SUBDIR += py-namebench
@@ -215,17 +208,18 @@
     SUBDIR += rpsl2acl
     SUBDIR += rubygem-dnsruby
     SUBDIR += rubygem-gitlab-net-dns
+    SUBDIR += rubygem-google-cloud-dns
     SUBDIR += rubygem-idn-ruby
     SUBDIR += rubygem-net-dns
     SUBDIR += rubygem-public_suffix
     SUBDIR += rubygem-public_suffix_service
     SUBDIR += rubygem-simpleidn
     SUBDIR += rubygem-validates_hostname
+    SUBDIR += rubygem-zonefile
     SUBDIR += samba-nsupdate
     SUBDIR += scavenge
     SUBDIR += sheerdns
     SUBDIR += sleuth
-    SUBDIR += sshfp
     SUBDIR += subfinder
     SUBDIR += tinystats
     SUBDIR += totd
@@ -243,7 +237,6 @@
     SUBDIR += wrapsrv
     SUBDIR += yadifa
     SUBDIR += zkt
-    SUBDIR += zonecheck
     SUBDIR += zonenotify
 
 .include <bsd.port.subdir.mk>

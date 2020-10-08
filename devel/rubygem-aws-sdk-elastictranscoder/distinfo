@@ -1,3 +1,3 @@
-TIMESTAMP = 1585076279
-SHA256 (rubygem/aws-sdk-elastictranscoder-1.19.0.gem) = 40ed1eb2b6787e1b323ab20082931969b034544a8384579bd2782b513d139fd7
-SIZE (rubygem/aws-sdk-elastictranscoder-1.19.0.gem) = 70144
+TIMESTAMP = 1601554648
+SHA256 (rubygem/aws-sdk-elastictranscoder-1.27.0.gem) = dca450fa7f7044d5b5c230749d46d66b1e8b508df8b90a427514833a01bf5539
+SIZE (rubygem/aws-sdk-elastictranscoder-1.27.0.gem) = 71680

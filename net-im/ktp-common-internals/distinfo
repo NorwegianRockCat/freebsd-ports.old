@@ -1,3 +1,3 @@
-TIMESTAMP = 1583439132
-SHA256 (KDE/applications/19.12.3/ktp-common-internals-19.12.3.tar.xz) = 48cde7fc4f2f0d39999f70699867044e0f85e06769a0824aac49c572fb1af5a4
-SIZE (KDE/applications/19.12.3/ktp-common-internals-19.12.3.tar.xz) = 445328
+TIMESTAMP = 1598945502
+SHA256 (KDE/release-service/20.08.1/ktp-common-internals-20.08.1.tar.xz) = 5750bde4950fbe26f06a306aa642c9c501d4f0e1b41b57234d9e36b189a91d1b
+SIZE (KDE/release-service/20.08.1/ktp-common-internals-20.08.1.tar.xz) = 449604

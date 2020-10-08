@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	slurm
-DISTVERSION=	19.05.5
+DISTVERSION=	20.02.1
 PORTREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	https://download.schedmd.com/slurm/
@@ -13,7 +13,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc
+NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
 NOT_FOR_ARCHS_REASON=	32-bit support is deprecated
 
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
@@ -83,7 +83,7 @@ CONFIGURE_ARGS=	--without-ofed
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${DISTVERSION}
 
 CFLAGS+=	-I${WRKSRC}/slurm -I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -lkvm
+LDFLAGS+=	-L${LOCALBASE}/lib -lsysinfo -lprocstat
 
 # Hack around nonfunctional --disable-gtktest flag
 pre-configure-GUI-off:

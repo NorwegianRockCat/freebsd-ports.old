@@ -99,8 +99,9 @@
     SUBDIR += font-winitzki-cyrillic
     SUBDIR += font-xfree86-type1
     SUBDIR += fontconfig
-    SUBDIR += fontconfig-reference
     SUBDIR += fontmatrix
+    SUBDIR += fontobene
+    SUBDIR += fontpreview
     SUBDIR += fonts-indic
     SUBDIR += fonttosfnt
     SUBDIR += freefont-ttf
@@ -140,6 +141,7 @@
     SUBDIR += libXfont2
     SUBDIR += libXft
     SUBDIR += liberation-fonts-ttf
+    SUBDIR += libertinus
     SUBDIR += libfontenc
     SUBDIR += linden-hill
     SUBDIR += linux-c7-fontconfig
@@ -160,12 +162,15 @@
     SUBDIR += monoid
     SUBDIR += montecarlo_fonts
     SUBDIR += montserrat
+    SUBDIR += mourier
     SUBDIR += moveable-type-fonts
     SUBDIR += nerd-fonts
     SUBDIR += nexfontsel
     SUBDIR += noto
     SUBDIR += noto-basic
+    SUBDIR += noto-emoji
     SUBDIR += noto-extra
+    SUBDIR += noto-hk
     SUBDIR += noto-jp
     SUBDIR += noto-kr
     SUBDIR += noto-sc
@@ -214,6 +219,7 @@
     SUBDIR += sourcesanspro-ttf
     SUBDIR += sourceserifpro-ttf
     SUBDIR += spleen
+    SUBDIR += steps-mono
     SUBDIR += stix-fonts
     SUBDIR += sudo-font
     SUBDIR += suxus

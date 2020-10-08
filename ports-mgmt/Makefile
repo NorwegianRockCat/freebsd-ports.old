@@ -15,7 +15,6 @@
     SUBDIR += genplist
     SUBDIR += jailaudit
     SUBDIR += lsknobs
-    SUBDIR += managepkg
     SUBDIR += mkreadmes
     SUBDIR += modules2tuple
     SUBDIR += octopkg
@@ -43,7 +42,6 @@
     SUBDIR += portal
     SUBDIR += portconf
     SUBDIR += portdowngrade
-    SUBDIR += portell
     SUBDIR += portest
     SUBDIR += portfind
     SUBDIR += portfmt

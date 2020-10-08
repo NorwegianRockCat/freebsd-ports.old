@@ -3,7 +3,7 @@
 
 PORTNAME=	critcl
 PORTVERSION=	3.1.18.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	tcltk@FreeBSD.org
@@ -24,7 +24,7 @@ GH_ACCOUNT=	andreas-kupries
 TEST_TARGET=	test
 
 PLIST_SUB+=	VER=${PORTVERSION:R} \
-		ARCH=${ARCH:C/arm.*/arm/:S/i386/ix86/:S/aarch64/arm/:S/mips64/mips/:S/powerpc64/powerpc/}
+		ARCH=${ARCH:C/arm.*/arm/:S/i386/ix86/:S/aarch64/arm/:S/mips64/mips/:C/powerpc64.*/powerpc/}
 PORTDOCS=	*
 
 NO_BUILD=	yes

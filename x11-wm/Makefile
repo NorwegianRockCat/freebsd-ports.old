@@ -3,7 +3,6 @@
 
     COMMENT = X11 window managers
 
-    SUBDIR += aewm
     SUBDIR += afterstep
     SUBDIR += afterstep-stable
     SUBDIR += amiwm
@@ -13,6 +12,7 @@
     SUBDIR += awesome-vicious
     SUBDIR += bbkeys
     SUBDIR += bbpager
+    SUBDIR += berry
     SUBDIR += blackbox
     SUBDIR += bspwm
     SUBDIR += cage
@@ -22,20 +22,11 @@
     SUBDIR += compiz-plugins-main
     SUBDIR += compiz-plugins-unsupported
     SUBDIR += compizconfig-backend-gconf
-    SUBDIR += compizconfig-python
     SUBDIR += compton
     SUBDIR += ctwm
     SUBDIR += cwm
     SUBDIR += devilspie
     SUBDIR += dwm
-    SUBDIR += e-module-alarm
-    SUBDIR += e-module-cpu
-    SUBDIR += e-module-deskshow
-    SUBDIR += e-module-everything-places
-    SUBDIR += e-module-mem
-    SUBDIR += e-module-rmb
-    SUBDIR += e-module-wlan
-    SUBDIR += e-modules
     SUBDIR += e16
     SUBDIR += e16-docs
     SUBDIR += echinus
@@ -46,20 +37,16 @@
     SUBDIR += evilwm
     SUBDIR += fbcmd
     SUBDIR += fluxbox
-    SUBDIR += fluxconf
     SUBDIR += fluxter
     SUBDIR += flwm
-    SUBDIR += fvwm-crystal
     SUBDIR += fvwm2
     SUBDIR += gcompmgr
     SUBDIR += herbstluftwm
     SUBDIR += hikari
     SUBDIR += hs-xmonad
-    SUBDIR += hs-xmonad-contrib
     SUBDIR += i3
     SUBDIR += i3-gaps
     SUBDIR += icewm
-    SUBDIR += ion
     SUBDIR += jewel
     SUBDIR += jwm
     SUBDIR += kickshaw
@@ -75,22 +62,20 @@
     SUBDIR += lxqt-session
     SUBDIR += lxsession
     SUBDIR += marco
-    SUBDIR += matwm2
     SUBDIR += mcwm
     SUBDIR += metacity
     SUBDIR += muffin
     SUBDIR += mutter
-    SUBDIR += nickleby
     SUBDIR += obconf
     SUBDIR += obconf-qt
     SUBDIR += obpager
-    SUBDIR += olvwm
     SUBDIR += openbox
     SUBDIR += oroborus
     SUBDIR += pager
     SUBDIR += peksystray
     SUBDIR += pekwm
     SUBDIR += phluid
+    SUBDIR += phoc
     SUBDIR += picom
     SUBDIR += piewm
     SUBDIR += plasma5-kdecoration
@@ -98,7 +83,6 @@
     SUBDIR += pwm
     SUBDIR += qtile
     SUBDIR += ratmen
-    SUBDIR += ratmenu
     SUBDIR += ratpoison
     SUBDIR += rubygem-uh-layout
     SUBDIR += rubygem-uh-wm
@@ -117,6 +101,7 @@
     SUBDIR += vtwm
     SUBDIR += w9wm
     SUBDIR += wayfire
+    SUBDIR += wayfire-plugins-extra
     SUBDIR += windowmaker
     SUBDIR += wm2
     SUBDIR += wmakerconf

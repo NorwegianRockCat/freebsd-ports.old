@@ -2,9 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	duplicity
-PORTVERSION=	0.8.12
-DISTVERSIONSUFFIX=	.1612
-PORTREVISION=	1
+PORTVERSION=	0.8.16
 CATEGORIES=	sysutils
 MASTER_SITES=	https://code.launchpad.net/duplicity/0.8-series/${PORTVERSION}/+download/
 
@@ -14,6 +12,7 @@ COMMENT=	Backup tool that uses librsync and GnuPG
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>=0:devel/py-setuptools_scm@${PY_FLAVOR}
 LIB_DEPENDS=	librsync.so:net/librsync
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fasteners>=0:devel/py-fasteners@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}paramiko>=0:security/py-paramiko@${PY_FLAVOR} \
@@ -27,11 +26,9 @@ USES=		localbase python shebangfix
 USE_PYTHON=	autoplist distutils noflavors
 USE_LDCONFIG=	yes
 
-CONFLICTS_INSTALL=	duplicity07 duplicity-devel
-
 SHEBANG_FILES=	bin/duplicity bin/rdiffdir
 
-PORTDOCS=	CHANGELOG COPYING README README-REPO README-LOG
+PORTDOCS=	CHANGELOG COPYING README.md README-REPO.md README-LOG.md
 
 POST_PLIST=	trim-duplicity-testing
 
@@ -65,7 +62,7 @@ post-patch:
 .endfor
 
 post-patch-NLS-off:
-	@${REINPLACE_CMD} -e '55,63d' \
+	@${REINPLACE_CMD} -e '109,133d' \
 		${WRKSRC}/setup.py
 
 post-patch-FTP-off:

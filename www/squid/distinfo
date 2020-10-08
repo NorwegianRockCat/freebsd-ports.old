@@ -1,3 +1,3 @@
-TIMESTAMP = 1573809964
-SHA256 (squid4/squid-4.10.tar.xz) = 98f0100afd8a42ea5f6b81eb98b0e4b36d7a54beab1c73d2f1705ab49b025f1f
-SIZE (squid4/squid-4.10.tar.xz) = 2445848
+TIMESTAMP = 1598206369
+SHA256 (squid-4.13.tar.xz) = 6891a0f540e60779b4f24f1802a302f813c6f473ec7336a474ed68c3e2e53ee0
+SIZE (squid-4.13.tar.xz) = 2452752

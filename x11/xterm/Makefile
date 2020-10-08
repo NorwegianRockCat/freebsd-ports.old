@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	xterm
-PORTVERSION=	353
+PORTVERSION=	360
 PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.invisible-island.net/xterm/:src1 \
@@ -89,6 +89,10 @@ post-extract:
 	@${CP} ${WRKDIR}/bsd-xterm-icons-1/*.png \
 		${WRKDIR}/bsd-xterm-icons-1/*.xpm \
 			${WRKSRC}/icons/
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|/usr\(/share/pixmaps\)|${LOCALBASE}\1|" \
+		${WRKSRC}/misc.c
 
 post-install:
 .for f in koi8rxterm resize uxterm xterm

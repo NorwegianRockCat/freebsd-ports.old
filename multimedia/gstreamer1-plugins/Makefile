@@ -5,7 +5,7 @@ PORTNAME=	gstreamer
 PORTVERSION?=	${BASE_PORTVERSION}
 # When chasing a shared library for a plug-in bump the PORTREVISION in the
 # plug-in port instead, like ${category}/gstreamer1-plugin-${PLUGIN}.
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	GNOME/sources/gst-plugins-base/${PORTVERSION:R}:base \
 		GNOME/sources/gst-plugins-good/${PORTVERSION:R}:good \
@@ -176,6 +176,9 @@ post-patch:
 	  s|$$(top_builddir)/gst-libs/gst/allocators/libgstbadallocators-$$(GST_API_VERSION).la|-lgstbadallocators-${VERSION}|; \
 	  s|$$(top_builddir)/gst-libs/gst/audio/libgstbadaudio-$$(GST_API_VERSION).la|-lgstbadaudio-${VERSION}|; \
 	  s|$$(top_builddir)/gst-libs/gst/video/libgstbadvideo-$$(GST_API_VERSION).la|-lgstbadvideo-${VERSION}|'
+	@${FIND} ${WRKSRC}/ext ${WRKSRC}/gst ${WRKSRC}/gst-libs \
+		-name Makefile.in -exec ${REINPLACE_CMD} \
+		'/foreach/s/\\#include/#include/' {} +
 .endif
 
 .if ${DIST} == bad

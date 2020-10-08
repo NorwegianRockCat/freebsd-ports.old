@@ -5,8 +5,7 @@
 
 PORTNAME=	RStudio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.5033-2752
-DISTVERSIONSUFFIX=	-g29e90c87a2
+DISTVERSION=	1.3.1093
 CATEGORIES=	devel math java
 MASTER_SITES=	https://s3.amazonaws.com/rstudio-buildtools/dictionaries/:dictionaries \
 		https://s3.amazonaws.com/rstudio-buildtools/:buildtools
@@ -33,9 +32,10 @@ LIB_DEPENDS=	libR.so:math/R \
 		libuuid.so:misc/e2fsprogs-libuuid
 
 USES=		cmake desktop-file-utils fortran localbase:ldflags pkgconfig qt:5 shared-mime-info ssl
-USE_QT=		core dbus declarative gui location network opengl printsupport sensors \
+USE_QT=		core dbus declarative gui location network opengl printsupport quickcontrols sensors \
 		sql svg webchannel webengine webkit widgets xml xmlpatterns buildtools_build qmake_build
-USE_JAVA=	13
+USE_JAVA=	yes
+JAVA_VERSION=	8
 JAVA_BUILD=	yes
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tl}
@@ -92,7 +92,7 @@ post-install:
 	  echo "fi"; \
 	  echo ""; \
 	  echo "# workaround for the problem that RStudio passes /lib with LD_LIBRARY_PATH that causes the /lib/libgcc_s.so.1 conflict with gcc"; \
-	  echo "LD_PRELOAD=${PREFIX}/lib/gcc${GCC_DEFAULT}/libgcc_s.so JAVA_HOME=${JAVA_HOME} ${PREFIX}/lib/rstudio/bin/rstudio \"$$@\"" \
+	  echo "LD_PRELOAD=${PREFIX}/lib/gcc${GCC_DEFAULT}/libgcc_s.so JAVA_HOME=${JAVA_HOME} ${PREFIX}/lib/rstudio/bin/rstudio \"$$"@"\"" \
 	) > ${STAGEDIR}${PREFIX}/bin/rstudio
 	@${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/rstudio
 	@${REINPLACE_CMD} -e 's|^Exec=.*/rstudio|Exec=${PREFIX}/bin/rstudio|' ${STAGEDIR}${PREFIX}/share/applications/rstudio.desktop
