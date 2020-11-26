@@ -56,6 +56,7 @@
     SUBDIR += foomatic-db-engine
     SUBDIR += foomatic-db-hpijs
     SUBDIR += foomatic-filters
+    SUBDIR += fpc-libcups
     SUBDIR += fpdf
     SUBDIR += freetype
     SUBDIR += freetype2
@@ -117,6 +118,7 @@
     SUBDIR += magicfilter
     SUBDIR += makeindex
     SUBDIR += mftrace
+    SUBDIR += miktex
     SUBDIR += min12xxw
     SUBDIR += mp-a4
     SUBDIR += mp-letter

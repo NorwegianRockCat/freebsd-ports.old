@@ -60,12 +60,14 @@
     SUBDIR += dnswalk
     SUBDIR += dnswall
     SUBDIR += doc
+    SUBDIR += dog
     SUBDIR += doh-proxy
     SUBDIR += dq
     SUBDIR += drool
     SUBDIR += dsc
     SUBDIR += dsp
     SUBDIR += dynip
+    SUBDIR += encrypted-dns-server
     SUBDIR += erlang-idna
     SUBDIR += fastresolve
     SUBDIR += firedns
@@ -98,6 +100,7 @@
     SUBDIR += libdjbdns
     SUBDIR += libidn
     SUBDIR += libidn2
+    SUBDIR += libmicrodns
     SUBDIR += libnspsl
     SUBDIR += libpsl
     SUBDIR += linux-c7-libasyncns
@@ -116,7 +119,6 @@
     SUBDIR += nss_mdns
     SUBDIR += nss_resinit
     SUBDIR += opendd
-    SUBDIR += opendnssec
     SUBDIR += opendnssec2
     SUBDIR += openresolv
     SUBDIR += p5-AnyEvent-CacheDNS
@@ -181,6 +183,7 @@
     SUBDIR += py-dns
     SUBDIR += py-dns-lexicon
     SUBDIR += py-dnspython
+    SUBDIR += py-dnspython2
     SUBDIR += py-easyzone
     SUBDIR += py-idna
     SUBDIR += py-idna_ssl

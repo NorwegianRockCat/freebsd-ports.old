@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME?=	postgresql
-DISTVERSION?=	13.0
+DISTVERSION?=	13.1
 # PORTREVISION must be ?= otherwise, all slave ports get this PORTREVISION and
 # not their own.  Probably best to keep it at ?=0 when reset here too.
-PORTREVISION?=	2
+PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL/source/v${DISTVERSION}
 PKGNAMESUFFIX?= ${PORTVERSION:R}${COMPONENT}
@@ -98,9 +98,10 @@ DTRACE_INSTALL_TARGET=	install
 
 .if ${DISTVERSION:C/([0-9]*).*/\1/} >= 11
 OPTIONS_DEFINE+=	LLVM
+OPTIONS_DEFAULT+=	LLVM
 LLVM_DESC=		Build with support for JIT-compiling expressions
-OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${CHOSEN_COMPILER_TYPE}}
-OPTIONS_DEFAULT_clang=	LLVM
+OPTIONS_EXCLUDE+=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
+OPTIONS_EXCLUDE_powerpc64_12=	LLVM
 .endif
 
 .if ${DISTVERSION:C/([0-9]*).*/\1/} < 10

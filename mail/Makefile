@@ -456,6 +456,7 @@
     SUBDIR += php72-imap
     SUBDIR += php73-imap
     SUBDIR += php74-imap
+    SUBDIR += php80-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
@@ -489,6 +490,7 @@
     SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
+    SUBDIR += py-authheaders
     SUBDIR += py-authres
     SUBDIR += py-dkimpy
     SUBDIR += py-email-validator

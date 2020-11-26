@@ -19,9 +19,9 @@
 #		Examples:
 #
 #			USES=python:2.7		# Supports Python 2.7 Only
-#			USES=python:3.5+	# Supports Python 3.5 or later
-#			USES=python:3.5-3.8	# Supports Python 3.5 to 3.8
-#			USES=python:-3.6	# Supports Python up to 3.6
+#			USES=python:3.6+	# Supports Python 3.6 or later
+#			USES=python:3.6-3.9	# Supports Python 3.6 to 3.9
+#			USES=python:-3.8	# Supports Python up to 3.8
 #			USES=python		# Supports any/all Python versions
 #
 # NOTE:	<version-spec> should be as specific as possible, matching the versions
@@ -250,7 +250,7 @@ _INCLUDE_USES_PYTHON_MK=	yes
 # What Python version and what Python interpreters are currently supported?
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-_PYTHON_VERSIONS=		2.7 3.7 3.8 3.6 # preferred first
+_PYTHON_VERSIONS=		2.7 3.7 3.8 3.9 3.6 # preferred first
 _PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
@@ -639,12 +639,12 @@ PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1<1.20,1:math/py-numpy@${PY_FLAVOR}
 .if ${PYTHON_REL} < 3500
 PY_PILLOW=	${PYTHON_PKGNAMEPREFIX}pillow6>=6.0.0:graphics/py-pillow6@${PY_FLAVOR}
 PY_PYGMENTS=	${PYTHON_PKGNAMEPREFIX}pygments-25>=2.5.1:textproc/py-pygments-25@${PY_FLAVOR}
-PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx18>=0:textproc/py-sphinx18@${PY_FLAVOR}
+PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx18>=0,1:textproc/py-sphinx18@${PY_FLAVOR}
 PY_TYPING=	${PYTHON_PKGNAMEPREFIX}typing>=3.7.4.1:devel/py-typing@${PY_FLAVOR}
 .else
 PY_PILLOW=	${PYTHON_PKGNAMEPREFIX}pillow>=7.0.0:graphics/py-pillow@${PY_FLAVOR}
 PY_PYGMENTS=	${PYTHON_PKGNAMEPREFIX}pygments>=2.5.1:textproc/py-pygments@${PY_FLAVOR}
-PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx>=0:textproc/py-sphinx@${PY_FLAVOR}
+PY_SPHINX=	${PYTHON_PKGNAMEPREFIX}sphinx>=3.0,1:textproc/py-sphinx@${PY_FLAVOR}
 PY_TYPING=
 .endif
 

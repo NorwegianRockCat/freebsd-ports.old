@@ -63,6 +63,7 @@
     SUBDIR += atf-rk3328
     SUBDIR += atf-rk3399
     SUBDIR += atf-sun50i_a64
+    SUBDIR += atf-sun50i_h6
     SUBDIR += atitvout
     SUBDIR += atop
     SUBDIR += auto-admin
@@ -157,12 +158,17 @@
     SUBDIR += cfengine-masterfiles313
     SUBDIR += cfengine-masterfiles314
     SUBDIR += cfengine-masterfiles315
+    SUBDIR += cfengine-masterfiles316
+    SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine310
     SUBDIR += cfengine311
     SUBDIR += cfengine312
     SUBDIR += cfengine313
     SUBDIR += cfengine314
     SUBDIR += cfengine315
+    SUBDIR += cfengine316
+    SUBDIR += cfengine317
+    SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chgrep
     SUBDIR += choria
@@ -225,6 +231,7 @@
     SUBDIR += daemontools-encore
     SUBDIR += daggy
     SUBDIR += dar
+    SUBDIR += datadog
     SUBDIR += dateutils
     SUBDIR += dc3dd
     SUBDIR += dcfldd
@@ -311,6 +318,7 @@
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += etcupdate
+    SUBDIR += ethname
     SUBDIR += evhz
     SUBDIR += evisum
     SUBDIR += evtviewer
@@ -425,6 +433,7 @@
     SUBDIR += geteltorito
     SUBDIR += getssl
     SUBDIR += gigolo
+    SUBDIR += gitwatch
     SUBDIR += gkfreq
     SUBDIR += gkleds2
     SUBDIR += gkrellflynn
@@ -435,7 +444,6 @@
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
-    SUBDIR += gnome-mount
     SUBDIR += gnome-power-manager
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
@@ -523,6 +531,7 @@
     SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
+    SUBDIR += jail_exporter
     SUBDIR += jailadmin
     SUBDIR += jaildaemon
     SUBDIR += jailme
@@ -909,7 +918,8 @@
     SUBDIR += php73-posix
     SUBDIR += php74-fileinfo
     SUBDIR += php74-posix
-    SUBDIR += phpfpm_exporter
+    SUBDIR += php80-fileinfo
+    SUBDIR += php80-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -923,10 +933,10 @@
     SUBDIR += plasma5-kmenuedit
     SUBDIR += plasma5-ksysguard
     SUBDIR += plasma5-libksysguard
+    SUBDIR += plasma5-plasma-disks
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
-    SUBDIR += plasma5-user-manager
     SUBDIR += plconfig
     SUBDIR += pmt
     SUBDIR += pnscan
@@ -975,6 +985,7 @@
     SUBDIR += py-borgmatic
     SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
+    SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
     SUBDIR += py-distro
@@ -1039,6 +1050,7 @@
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qjail
+    SUBDIR += qjail54
     SUBDIR += qlogtools
     SUBDIR += qsudo
     SUBDIR += qt5-qtdiag
@@ -1275,10 +1287,6 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng320
-    SUBDIR += syslog-ng321
-    SUBDIR += syslog-ng322
-    SUBDIR += syslog-ng323
     SUBDIR += syslog-ng324
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
@@ -1303,11 +1311,13 @@
     SUBDIR += terraform-docs
     SUBDIR += terraform-provider-gridscale
     SUBDIR += terraform-provider-vultr
+    SUBDIR += terraform-switcher
     SUBDIR += terragrunt
     SUBDIR += testdisk
     SUBDIR += thefish
     SUBDIR += timelimit
     SUBDIR += timemon
+    SUBDIR += tiramisu
     SUBDIR += titlefix
     SUBDIR += tkdvd
     SUBDIR += tlsdate
@@ -1369,6 +1379,7 @@
     SUBDIR += u-boot-orangepi-zero
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
+    SUBDIR += u-boot-pine-h64
     SUBDIR += u-boot-pine64
     SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook
@@ -1377,6 +1388,7 @@
     SUBDIR += u-boot-qemu-arm64
     SUBDIR += u-boot-qemu-riscv64
     SUBDIR += u-boot-riotboard
+    SUBDIR += u-boot-rock-pi-4
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64
     SUBDIR += u-boot-rpi
@@ -1387,6 +1399,7 @@
     SUBDIR += u-boot-rpi4
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
+    SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
     SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard

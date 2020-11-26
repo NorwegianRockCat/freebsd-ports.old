@@ -39,13 +39,18 @@ DRIZZLE_VARS=		DSO_EXTMODS+=drizzle
 
 DYNAMIC_TLS_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-dynamic_tls_records
 
-DYNAMIC_UPSTREAM_GH_TUPLE=	cubicdaiya:ngx_dynamic_upstream:cc5dac3:dynamic_upstream
+DYNAMIC_UPSTREAM_GH_TUPLE=	ZigzagAK:ngx_dynamic_upstream:960eef2:dynamic_upstream
 DYNAMIC_UPSTREAM_VARS=		DSO_EXTMODS+=dynamic_upstream
+
+DYNAMIC_HC_GH_TUPLE=	ZigzagAK:ngx_dynamic_healthcheck:61acf02:dynamic_hc
+DYNAMIC_HC_VARS=		DSO_EXTMODS+=dynamic_hc
+DYNAMIC_HC_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_dynamic_healthcheck-config
+DYNAMIC_HC_IMPLIES=	DYNAMIC_UPSTREAM
 
 DEVEL_KIT_GH_TUPLE=		simpl:ngx_devel_kit:v0.3.1:devel_kit
 DEVEL_KIT_VARS=			FIRST_DSO_EXTMODS+=devel_kit
 
-ECHO_GH_TUPLE=		openresty:echo-nginx-module:996412d:echo
+ECHO_GH_TUPLE=		openresty:echo-nginx-module:5a402aa:echo
 ECHO_VARS=		DSO_EXTMODS+=echo
 
 ENCRYPTSESSION_IMPLIES=		DEVEL_KIT
@@ -73,7 +78,7 @@ HTTP_AUTH_JWT_GH_TUPLE=		TeslaGov:ngx-http-auth-jwt-module:80d89d9:http_auth_jwt
 HTTP_AUTH_JWT_VARS=			DSO_EXTMODS+=http_auth_jwt
 HTTP_AUTH_JWT_LIB_DEPENDS=	libjwt.so:www/libjwt libjansson.so:devel/jansson
 
-HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:21bb963:auth_krb5
+HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:72c8ee0:auth_krb5
 HTTP_AUTH_KRB5_VARS=		DSO_EXTMODS+=auth_krb5
 HTTP_AUTH_KRB5_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
 
@@ -218,7 +223,7 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.17:lua
+LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.19:lua
 LUA_VARS=		DSO_EXTMODS+=lua
 
 MEMC_GH_TUPLE=		openresty:memc-nginx-module:v0.18:memc
@@ -229,11 +234,11 @@ MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
 MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.1:modsec
 MODSECURITY3_VARS=		DSO_EXTMODS+=modsec
 
-NAXSI_NGINX_VER=	0.56
+NAXSI_NGINX_VER=	1.1a
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:0.4.3:njs
+NJS_GH_TUPLE=		nginx:njs:0.4.4:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 NJS_USES=		libedit
 

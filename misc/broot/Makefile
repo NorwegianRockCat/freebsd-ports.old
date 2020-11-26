@@ -2,7 +2,8 @@
 
 PORTNAME=	broot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.2
+DISTVERSION=	1.0.5
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	vulcan@wired.sh
@@ -41,6 +42,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		cast-0.2.3 \
 		cc-1.0.60 \
 		cfg-if-0.1.10 \
+		char_reader-0.1.0 \
 		chrono-0.4.18 \
 		clap-2.33.3 \
 		clipboard-win-4.0.3 \
@@ -90,6 +92,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		lazy-regex-0.1.4 \
 		lazy_static-1.4.0 \
 		lazycell-1.3.0 \
+		lfs-core-0.3.1 \
 		libc-0.2.77 \
 		libgit2-sys-0.12.13+1.0.1 \
 		libz-sys-1.1.2 \
@@ -103,7 +106,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		memchr-2.3.3 \
 		memmap-0.7.0 \
 		memoffset-0.5.6 \
-		minimad-0.6.5 \
+		minimad-0.6.7 \
 		miniz_oxide-0.3.7 \
 		miniz_oxide-0.4.2 \
 		mio-0.7.1 \
@@ -172,7 +175,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		syn-1.0.42 \
 		syntect-4.4.0 \
 		term-0.6.1 \
-		termimad-0.8.26 \
+		termimad-0.8.29 \
 		terminal-clipboard-0.1.1 \
 		textwrap-0.11.0 \
 		thiserror-1.0.20 \

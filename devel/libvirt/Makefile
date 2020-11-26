@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libvirt
-PORTVERSION=	6.8.0
+PORTVERSION=	6.9.0
 CATEGORIES=	devel
 MASTER_SITES=	http://libvirt.org/sources/ \
 		ftp://libvirt.org/libvirt/
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libgnutls.so:security/gnutls \
 		libxml2.so:textproc/libxml2
 BUILD_DEPENDS=	dnsmasq:dns/dnsmasq \
-		rst2html:textproc/py-docutils \
+		rst2html-${PYTHON_VER}:textproc/py-docutils@${PY_FLAVOR} \
 		xsltproc:textproc/libxslt
 RUN_DEPENDS=	dnsmasq:dns/dnsmasq
 
@@ -104,11 +104,13 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-SHLIB_VER=	0.6008.0
+SHLIB_VER=	0.6009.0
 PLIST_SUB+=	SHLIB_VER=${SHLIB_VER}
 PORTDOCS=	*
 SHEBANG_FILES=	src/keycodemapdb/tools/keymap-gen
-BINARY_ALIAS=	python3=${PYTHON_CMD}
+BINARY_ALIAS=	python3=${PYTHON_CMD} \
+		rst2man.py=rst2man.py-${PYTHON_VER} \
+		rst2html5.py=rst2html5.py-${PYTHON_VER}
 
 SUB_FILES=	pkg-message
 

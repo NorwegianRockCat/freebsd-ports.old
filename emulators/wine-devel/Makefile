@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.17
-PORTREVISION=	1
+DISTVERSION=	5.22
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -95,7 +94,7 @@ LDAP_USE=		OPENLDAP=yes
 LIBXSLT_CONFIGURE_WITH=	xslt
 LIBXSLT_LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-5.1.0-x86.msi:emulators/wine-mono-devel
+MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-5.1.1-x86.msi:emulators/wine-mono-devel
 
 MPG123_CONFIGURE_WITH=	mpg123
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
@@ -114,7 +113,7 @@ STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
 				git:devel/git \
 				autoconf>0:devel/autoconf
 STAGING_LIB_DEPENDS=	libtxc_dxtn.so:graphics/s2tc
-STAGING_BROKEN=		fails to compile: file.c:237:37: error: 'EXTATTR_NAMESPACE_USER' undeclared
+STAGING_EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-dlls-ntdll-unix-file.c
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat

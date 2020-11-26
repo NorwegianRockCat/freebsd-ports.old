@@ -42,7 +42,6 @@
     SUBDIR += conlecterm
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
-    SUBDIR += decurs
     SUBDIR += deforaos-desktop
     SUBDIR += deforaos-keyboard
     SUBDIR += deforaos-libdesktop
@@ -61,13 +60,13 @@
     SUBDIR += erun
     SUBDIR += eterm
     SUBDIR += evilvte
+    SUBDIR += evtest
     SUBDIR += fbdesk
     SUBDIR += fbpanel
     SUBDIR += find-cursor
     SUBDIR += fireflies
     SUBDIR += florence
     SUBDIR += flruler
-    SUBDIR += fluxbg
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
@@ -90,6 +89,7 @@
     SUBDIR += gstreamer1-plugins-x
     SUBDIR += gstreamer1-plugins-ximagesrc
     SUBDIR += gsynaptics
+    SUBDIR += gtk-app-menu
     SUBDIR += gtk-theme-switch2
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
@@ -107,6 +107,7 @@
     SUBDIR += idesk
     SUBDIR += imwheel
     SUBDIR += innerspace
+    SUBDIR += inputplug
     SUBDIR += j4-dmenu-desktop
     SUBDIR += jgmenu
     SUBDIR += kanshi
@@ -211,6 +212,7 @@
     SUBDIR += mate-applets
     SUBDIR += mate-base
     SUBDIR += mate-desktop
+    SUBDIR += mate-dock-applet
     SUBDIR += mate-menus
     SUBDIR += mate-panel
     SUBDIR += mate-screensaver
@@ -277,6 +279,7 @@
     SUBDIR += qt5-x11extras
     SUBDIR += qterminal
     SUBDIR += radare-cutter
+    SUBDIR += remontoire
     SUBDIR += rendercheck
     SUBDIR += rgb
     SUBDIR += rofi
@@ -314,6 +317,7 @@
     SUBDIR += swaybg
     SUBDIR += swayidle
     SUBDIR += swaylock
+    SUBDIR += swaylock-effects
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed
@@ -324,6 +328,7 @@
     SUBDIR += thinglaunch
     SUBDIR += thingylaunch
     SUBDIR += tilda
+    SUBDIR += tilix
     SUBDIR += tint
     SUBDIR += trayer
     SUBDIR += tycoon
@@ -336,6 +341,7 @@
     SUBDIR += virtualgl
     SUBDIR += wallutils
     SUBDIR += waybar
+    SUBDIR += wayland-logout
     SUBDIR += wbar
     SUBDIR += wcm
     SUBDIR += wdisplays
@@ -344,6 +350,8 @@
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
     SUBDIR += wlogout
+    SUBDIR += wlr-randr
+    SUBDIR += wlrctl
     SUBDIR += wmappl
     SUBDIR += wmblob
     SUBDIR += wmbutton
@@ -359,6 +367,7 @@
     SUBDIR += wofi
     SUBDIR += workrave
     SUBDIR += wshowkeys
+    SUBDIR += wtype
     SUBDIR += x11perf
     SUBDIR += x3270
     SUBDIR += xantfarm
@@ -402,6 +411,7 @@
     SUBDIR += xcut
     SUBDIR += xditview
     SUBDIR += xdm
+    SUBDIR += xdo
     SUBDIR += xdotool
     SUBDIR += xdpyinfo
     SUBDIR += xdriinfo
@@ -465,6 +475,7 @@
     SUBDIR += xmsg
     SUBDIR += xmx
     SUBDIR += xnee
+    SUBDIR += xnotify
     SUBDIR += xob
     SUBDIR += xorg
     SUBDIR += xorg-apps

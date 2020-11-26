@@ -65,8 +65,8 @@
     SUBDIR += libretro-ppsspp
     SUBDIR += libspectrum
     SUBDIR += linux-c7
-    SUBDIR += linux-power9-functional-sim
     SUBDIR += linux-power10-functional-sim
+    SUBDIR += linux-power9-functional-sim
     SUBDIR += linux_base-c7
     SUBDIR += lisaem
     SUBDIR += mame
@@ -104,7 +104,6 @@
     SUBDIR += pcem
     SUBDIR += pcemu
     SUBDIR += pcsxr
-    SUBDIR += playonbsd
     SUBDIR += ppsspp
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
@@ -122,7 +121,6 @@
     SUBDIR += qemu50
     SUBDIR += qmc2
     SUBDIR += quasi88
-    SUBDIR += riscv-fesvr
     SUBDIR += riscv-isa-sim
     SUBDIR += rpcs3
     SUBDIR += rtc

@@ -13,8 +13,8 @@ LICENSE=	APACHE20
 USES=		compiler go:modules
 
 USE_GITHUB=	yes
-GHTAG=		RELEASE.2020-10-03T02-19-42Z
-COMMIT_ID=	806625cbffcf7850720a45ff13aa25390ac757af
+GHTAG=		RELEASE.2020-11-19T23-48-16Z
+COMMIT_ID=	f794fe79e3a756a823d30cd3c889dfa4326a3014
 
 GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		Azure:azure-pipeline-go:v0.2.2:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
@@ -24,8 +24,8 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		StackExchange:wmi:cbe66965904d:stackexchange_wmi/vendor/github.com/StackExchange/wmi \
 		alecthomas:participle:v0.2.1:alecthomas_participle/vendor/github.com/alecthomas/participle \
 		apache:thrift:v0.13.0:apache_thrift/vendor/git.apache.org/thrift.git \
-		bcicen:jstream:16c1f8af81c2:bcicen_jstream/vendor/github.com/bcicen/jstream \
-		beevik:ntp:v0.2.0:beevik_ntp/vendor/github.com/beevik/ntp \
+		bcicen:jstream:v1.0.1:bcicen_jstream/vendor/github.com/bcicen/jstream \
+		beevik:ntp:v0.3.0:beevik_ntp/vendor/github.com/beevik/ntp \
 		beorn7:perks:v1.0.0:beorn7_perks/vendor/github.com/beorn7/perks \
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -38,6 +38,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		dchest:siphash:v1.2.1:dchest_siphash/vendor/github.com/dchest/siphash \
 		dgrijalva:jwt-go:v3.2.0:dgrijalva_jwt_go/vendor/github.com/dgrijalva/jwt-go \
 		djherbis:atime:v1.0.0:djherbis_atime/vendor/github.com/djherbis/atime \
+		dswarbrick:smart:909a45200d6d:dswarbrick_smart/vendor/github.com/dswarbrick/smart \
 		dustin:go-humanize:v1.0.0:dustin_go_humanize/vendor/github.com/dustin/go-humanize \
 		eapache:go-resiliency:v1.1.0:eapache_go_resiliency/vendor/github.com/eapache/go-resiliency \
 		eapache:go-xerial-snappy:776d5712da21:eapache_go_xerial_snappy/vendor/github.com/eapache/go-xerial-snappy \
@@ -111,11 +112,11 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		minio:cli:v1.22.0:minio_cli/vendor/github.com/minio/cli \
 		minio:highwayhash:v1.0.0:minio_highwayhash/vendor/github.com/minio/highwayhash \
 		minio:md5-simd:v1.1.0:minio_md5_simd/vendor/github.com/minio/md5-simd \
-		minio:minio-go:14ed05478889:minio_minio_go_v7/vendor/github.com/minio/minio-go/v7 \
+		minio:minio-go:755b5633803a:minio_minio_go_v7/vendor/github.com/minio/minio-go/v7 \
 		minio:selfupdate:v0.3.1:minio_selfupdate/vendor/github.com/minio/selfupdate \
 		minio:sha256-simd:v0.1.1:minio_sha256_simd/vendor/github.com/minio/sha256-simd \
 		minio:simdjson-go:v0.1.5:minio_simdjson_go/vendor/github.com/minio/simdjson-go \
-		minio:sio:v0.2.0:minio_sio/vendor/github.com/minio/sio \
+		minio:sio:v0.2.1:minio_sio/vendor/github.com/minio/sio \
 		mitchellh:go-homedir:v1.1.0:mitchellh_go_homedir/vendor/github.com/mitchellh/go-homedir \
 		mitchellh:mapstructure:v1.1.2:mitchellh_mapstructure/vendor/github.com/mitchellh/mapstructure \
 		mmcloughlin:avo:443f81d77104:mmcloughlin_avo/vendor/github.com/mmcloughlin/avo \
@@ -132,7 +133,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		ncw:directio:v1.0.5:ncw_directio/vendor/github.com/ncw/directio \
 		nsqio:go-nsq:v1.0.7:nsqio_go_nsq/vendor/github.com/nsqio/go-nsq \
 		olivere:elastic:v5.0.86:olivere_elastic/vendor/gopkg.in/olivere/elastic.v5 \
-		philhofer:fwd:v1.0.0:philhofer_fwd/vendor/github.com/philhofer/fwd \
+		philhofer:fwd:v1.1.0:philhofer_fwd/vendor/github.com/philhofer/fwd \
 		pierrec:lz4:v2.4.0:pierrec_lz4/vendor/github.com/pierrec/lz4 \
 		pkg:errors:v0.9.1:pkg_errors/vendor/github.com/pkg/errors \
 		prometheus:client_golang:v1.0.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
@@ -154,7 +155,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		tidwall:match:v1.0.1:tidwall_match/vendor/github.com/tidwall/match \
 		tidwall:pretty:v1.0.0:tidwall_pretty/vendor/github.com/tidwall/pretty \
 		tidwall:sjson:v1.0.4:tidwall_sjson/vendor/github.com/tidwall/sjson \
-		tinylib:msgp:v1.1.2:tinylib_msgp/vendor/github.com/tinylib/msgp \
+		tinylib:msgp:v1.1.3:tinylib_msgp/vendor/github.com/tinylib/msgp \
 		uber-go:atomic:v1.6.0:uber_go_atomic/vendor/go.uber.org/atomic \
 		uber-go:multierr:v1.5.0:uber_go_multierr/vendor/go.uber.org/multierr \
 		uber-go:zap:v1.14.1:uber_go_zap/vendor/go.uber.org/zap \
