@@ -2,16 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	thunderbird
-DISTVERSION=	78.2.2
+DISTVERSION=	78.5.0
+PORTREVISION=	4
 CATEGORIES=	mail news net-im
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build3/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
-
-BROKEN_powerpc64=	fails to build: gmake[4]: *** [backend.mk:47: .deps/node.stub.stub] Error 246
 
 BUILD_DEPENDS=	nspr>=4.26:devel/nspr \
 		nss>=3.56:security/nss \
@@ -33,6 +32,7 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c \
 SSP_UNSAFE=	yes
 USE_GECKO=	gecko
 USE_MOZILLA=	-sqlite
+CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 USES=		tar:xz
 

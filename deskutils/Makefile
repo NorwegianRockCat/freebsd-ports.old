@@ -19,18 +19,23 @@
     SUBDIR += belcard
     SUBDIR += bigyear
     SUBDIR += bijiben
+    SUBDIR += birdtray
     SUBDIR += bitcollider
     SUBDIR += cairo-dock
     SUBDIR += cairo-dock-plugins
     SUBDIR += caja-extensions
     SUBDIR += cal
     SUBDIR += calcurse
+    SUBDIR += calendar
+    SUBDIR += calendar-data
     SUBDIR += calibre
     SUBDIR += cartotheque
     SUBDIR += cfiles
     SUBDIR += charmtimetracker
     SUBDIR += chart
     SUBDIR += clipit
+    SUBDIR += clipmenu
+    SUBDIR += clipnotify
     SUBDIR += conkyforecast
     SUBDIR += copyq
     SUBDIR += countdown
@@ -39,6 +44,7 @@
     SUBDIR += dfshow
     SUBDIR += docear
     SUBDIR += dosage
+    SUBDIR += dstask
     SUBDIR += easystroke
     SUBDIR += egroupware
     SUBDIR += fasd
@@ -137,7 +143,6 @@
     SUBDIR += latte-dock
     SUBDIR += libkdepim
     SUBDIR += ljclive
-    SUBDIR += logjam
     SUBDIR += lookbook
     SUBDIR += lumina-archiver
     SUBDIR += lumina-calculator
@@ -149,6 +154,7 @@
     SUBDIR += lumina-screenshot
     SUBDIR += lumina-textedit
     SUBDIR += lxqt-notificationd
+    SUBDIR += mate-indicator-applet
     SUBDIR += mate-notification-daemon
     SUBDIR += mate-utils
     SUBDIR += mbox-importer

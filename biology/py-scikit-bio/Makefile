@@ -2,7 +2,7 @@
 
 PORTNAME=	scikit-bio
 PORTVERSION=	0.5.6
-CATEGORIES=	biology python
+CATEGORIES=	biology education python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -28,4 +28,11 @@ RUN_DEPENDS=	${PYNUMPY} \
 USES=		python:3.7+
 USE_PYTHON=	autoplist distutils
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == i386
+CFLAGS+=	-msse2 # workaround for https://github.com/biocore/scikit-bio/issues/1727
+CXXFLAGS+=	-msse2
+.endif
+
+.include <bsd.port.post.mk>

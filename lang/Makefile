@@ -75,9 +75,11 @@
     SUBDIR += fpc-base
     SUBDIR += fpc-docs
     SUBDIR += fpc-lua
+    SUBDIR += fpc-pastojs
     SUBDIR += fpc-rexx
     SUBDIR += fpc-rtl-console
     SUBDIR += fpc-rtl-extra
+    SUBDIR += fpc-rtl-generics
     SUBDIR += fpc-rtl-objpas
     SUBDIR += fpc-rtl-unicode
     SUBDIR += fpc-source
@@ -116,6 +118,7 @@
     SUBDIR += go
     SUBDIR += go-devel
     SUBDIR += gomacro
+    SUBDIR += gprolog
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
@@ -168,6 +171,7 @@
     SUBDIR += lua51
     SUBDIR += lua52
     SUBDIR += lua53
+    SUBDIR += lua54
     SUBDIR += luajit
     SUBDIR += luajit-openresty
     SUBDIR += malbolge
@@ -257,6 +261,8 @@
     SUBDIR += php73-extensions
     SUBDIR += php74
     SUBDIR += php74-extensions
+    SUBDIR += php80
+    SUBDIR += php80-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl
@@ -280,10 +286,10 @@
     SUBDIR += python2
     SUBDIR += python27
     SUBDIR += python3
-    SUBDIR += python35
     SUBDIR += python36
     SUBDIR += python37
     SUBDIR += python38
+    SUBDIR += python39
     SUBDIR += qmasm
     SUBDIR += qscheme
     SUBDIR += quickjs
@@ -300,6 +306,7 @@
     SUBDIR += ruby25
     SUBDIR += ruby26
     SUBDIR += ruby27
+    SUBDIR += ruby30
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-bootstrap
@@ -332,7 +339,6 @@
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
     SUBDIR += spidermonkey60
-    SUBDIR += spidermonkey68
     SUBDIR += spidermonkey78
     SUBDIR += spl
     SUBDIR += squeak
@@ -358,6 +364,7 @@
     SUBDIR += visualworks
     SUBDIR += voc
     SUBDIR += yabasic
+    SUBDIR += yap
     SUBDIR += yorick
     SUBDIR += ypsilon
     SUBDIR += zig

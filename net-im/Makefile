@@ -11,7 +11,6 @@
     SUBDIR += coccinella
     SUBDIR += convey
     SUBDIR += cordless
-    SUBDIR += corebird
     SUBDIR += coyim
     SUBDIR += cutegram
     SUBDIR += diligent
@@ -56,14 +55,13 @@
     SUBDIR += libaccounts-qt5
     SUBDIR += libmesode
     SUBDIR += libnice
-    SUBDIR += libnice-gst010
     SUBDIR += libnice-gst1
     SUBDIR += libpurple
     SUBDIR += libqmatrixclient
     SUBDIR += libqtelegram-ae
+    SUBDIR += libquotient
     SUBDIR += libsignon-glib
     SUBDIR += libstrophe
-    SUBDIR += libtelepathy
     SUBDIR += licq
     SUBDIR += licq-icq
     SUBDIR += licq-jabber
@@ -78,6 +76,7 @@
     SUBDIR += meanwhile
     SUBDIR += mikutter
     SUBDIR += mtxclient
+    SUBDIR += neochat
     SUBDIR += nextcloud-talk
     SUBDIR += nheko
     SUBDIR += openfire
@@ -152,6 +151,7 @@
     SUBDIR += talkatu
     SUBDIR += teamwords
     SUBDIR += telegram
+    SUBDIR += telegram-cli
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
@@ -179,7 +179,6 @@
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
     SUBDIR += xmpp-client
-    SUBDIR += zephyr
     SUBDIR += zoom
 
 .include <bsd.port.subdir.mk>

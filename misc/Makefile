@@ -57,6 +57,7 @@
     SUBDIR += compat7x
     SUBDIR += compat8x
     SUBDIR += compat9x
+    SUBDIR += concourse
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosti
@@ -206,15 +207,19 @@
     SUBDIR += lesspipe
     SUBDIR += lf
     SUBDIR += libad9361-iio
+    SUBDIR += libcomps
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
     SUBDIR += libkeduvocdocument
     SUBDIR += liblxi
     SUBDIR += libmetalink
+    SUBDIR += libmodulemd
     SUBDIR += libpostal
     SUBDIR += libpredict
     SUBDIR += libpri
+    SUBDIR += librepo
+    SUBDIR += libsolv
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
@@ -351,6 +356,7 @@
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
     SUBDIR += php74-calendar
+    SUBDIR += php80-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += pnpids
@@ -390,7 +396,6 @@
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
-    SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
     SUBDIR += py-pyprind

@@ -135,6 +135,7 @@
     SUBDIR += findmaildirs
     SUBDIR += geary
     SUBDIR += gensig
+    SUBDIR += getmail
     SUBDIR += getmail6
     SUBDIR += gmime2
     SUBDIR += gmime2-sharp
@@ -203,6 +204,7 @@
     SUBDIR += mailgraph
     SUBDIR += mailhog
     SUBDIR += mailman
+    SUBDIR += mailman3
     SUBDIR += mailscanner
     SUBDIR += mailsync
     SUBDIR += mailutils
@@ -262,9 +264,7 @@
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-devel
     SUBDIR += opensmtpd-extras
-    SUBDIR += opensmtpd-extras-queue-python
     SUBDIR += opensmtpd-extras-queue-ram
-    SUBDIR += opensmtpd-extras-scheduler-python
     SUBDIR += opensmtpd-extras-scheduler-ram
     SUBDIR += opensmtpd-extras-table-ldap
     SUBDIR += opensmtpd-extras-table-mysql
@@ -456,6 +456,7 @@
     SUBDIR += php72-imap
     SUBDIR += php73-imap
     SUBDIR += php74-imap
+    SUBDIR += php80-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
@@ -489,6 +490,7 @@
     SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-alot
+    SUBDIR += py-authheaders
     SUBDIR += py-authres
     SUBDIR += py-dkimpy
     SUBDIR += py-email-validator
@@ -665,7 +667,6 @@
     SUBDIR += squirrelmail-spam-buttons-plugin
     SUBDIR += squirrelmail-squirrel_logger-plugin
     SUBDIR += squirrelmail-timeout_user-plugin
-    SUBDIR += squirrelmail-tmda-plugin
     SUBDIR += squirrelmail-translations
     SUBDIR += squirrelmail-unsafe_image_rules-plugin
     SUBDIR += squirrelmail-user_special_mailboxes-plugin
@@ -683,7 +684,6 @@
     SUBDIR += thunderbird
     SUBDIR += thunderbird-dictionaries
     SUBDIR += tlb
-    SUBDIR += tmda
     SUBDIR += tmpmail
     SUBDIR += tpop3d
     SUBDIR += trojita

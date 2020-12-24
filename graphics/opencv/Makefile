@@ -6,7 +6,7 @@ PORTVERSION=	3.4.1
 PORTREVISION=	36
 CATEGORIES=	graphics
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tcberner@FreeBSD.org
 COMMENT=	Open Source Computer Vision library
 
 LICENSE=	BSD3CLAUSE
@@ -179,7 +179,7 @@ EXAMPLES_CMAKE_BOOL=	INSTALL_C_EXAMPLES
 PERFORMANCE_DESC=	Performance enhancing libraries
 
 EIGEN3_DESC=		Eigen 3 support
-EIGEN3_BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:math/eigen3
+EIGEN3_USES=		eigen:3
 EIGEN3_CMAKE_BOOL=	WITH_EIGEN
 
 OPENCL_DESC=		OpenCL support

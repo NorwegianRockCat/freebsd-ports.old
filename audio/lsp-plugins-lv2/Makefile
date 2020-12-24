@@ -3,6 +3,7 @@
 PORTNAME=	lsp-plugins
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	1.1.26
+PORTREVISION=	1
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
@@ -12,7 +13,7 @@ COMMENT=	Collection of free LV2 plugins
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc64
+ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	assembly only for these architectures
 
 BUILD_DEPENDS=	lv2>0:audio/lv2
@@ -21,7 +22,9 @@ LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 USES=		compiler:c11 gmake gl gnome iconv:wchar_t pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	sadko4u
-USE_GCC=	any # clang breaks: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=232911
+# changed from yes to 9 due to:
+# types.h:95:37: error: 'asm' operand has impossible constraints
+USE_GCC=	9 # clang breaks: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=232911
 USE_GNOME=	cairo
 USE_XORG=	x11
 USE_GL=		gl

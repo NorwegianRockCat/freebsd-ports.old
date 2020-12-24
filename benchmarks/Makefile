@@ -3,6 +3,7 @@
 
     COMMENT = Benchmarking tools
 
+    SUBDIR += ali
     SUBDIR += apib
     SUBDIR += autobench
     SUBDIR += blogbench
@@ -16,6 +17,7 @@
     SUBDIR += dhrystone
     SUBDIR += dkftpbench
     SUBDIR += fhourstones
+    SUBDIR += filebench
     SUBDIR += fio
     SUBDIR += flamegraph
     SUBDIR += flops
@@ -30,6 +32,7 @@
     SUBDIR += httperf
     SUBDIR += hyperfine
     SUBDIR += imb
+    SUBDIR += inferno
     SUBDIR += interbench
     SUBDIR += iorate
     SUBDIR += iozone

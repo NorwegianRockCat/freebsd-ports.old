@@ -1,8 +1,6 @@
 bin/ncneofetch
 bin/notcurses-demo
 bin/notcurses-input
-bin/notcurses-ncreel
-%%DOCS%%bin/notcurses-tester
 bin/notcurses-tetris
 bin/notcurses-view
 include/ncpp/Cell.hh
@@ -28,6 +26,7 @@ include/ncpp/Tablet.hh
 include/ncpp/TabletCallback.hh
 include/ncpp/Utilities.hh
 include/ncpp/Visual.hh
+include/ncpp/Widget.hh
 include/ncpp/_exceptions.hh
 include/ncpp/_flag_enum_operator_helpers.hh
 include/ncpp/_helpers.hh
@@ -36,6 +35,7 @@ include/ncpp/ncpp.hh
 include/notcurses/direct.h
 include/notcurses/nckeys.h
 include/notcurses/notcurses.h
+include/notcurses/version.h
 lib/cmake/Notcurses/NotcursesConfig.cmake
 lib/cmake/Notcurses/NotcursesConfigVersion.cmake
 lib/libnotcurses++.a
@@ -51,7 +51,6 @@ libdata/pkgconfig/notcurses.pc
 %%DOCS%%share/man/man1/ncneofetch.1.gz
 %%DOCS%%share/man/man1/notcurses-demo.1.gz
 %%DOCS%%share/man/man1/notcurses-input.1.gz
-%%DOCS%%share/man/man1/notcurses-ncreel.1.gz
 %%DOCS%%share/man/man1/notcurses-tester.1.gz
 %%DOCS%%share/man/man1/notcurses-tetris.1.gz
 %%DOCS%%share/man/man1/notcurses-view.1.gz
@@ -141,10 +140,11 @@ libdata/pkgconfig/notcurses.pc
 %%DATADIR%%/dsscaw-purp.png
 %%DATADIR%%/eagles.png
 %%DATADIR%%/fm6.mkv
+%%DATADIR%%/fonts.jpg
 %%DATADIR%%/lamepatents.jpg
 %%DATADIR%%/megaman2.bmp
 %%DATADIR%%/normal.png
-%%DATADIR%%/notcursesI.avi
+%%DATADIR%%/notcursesII.mkv
 %%DATADIR%%/samoa.avi
 %%DATADIR%%/tetris-background.jpg
 %%DATADIR%%/warmech.bmp

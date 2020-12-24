@@ -40,6 +40,7 @@
     SUBDIR += fluxter
     SUBDIR += flwm
     SUBDIR += fvwm2
+    SUBDIR += gamescope
     SUBDIR += gcompmgr
     SUBDIR += herbstluftwm
     SUBDIR += hikari
@@ -84,6 +85,7 @@
     SUBDIR += qtile
     SUBDIR += ratmen
     SUBDIR += ratpoison
+    SUBDIR += river
     SUBDIR += rubygem-uh-layout
     SUBDIR += rubygem-uh-wm
     SUBDIR += sawfish
@@ -119,5 +121,6 @@
     SUBDIR += xfce4-panel-profiles
     SUBDIR += xfce4-session
     SUBDIR += xfce4-wm
+    SUBDIR += yeahwm
 
 .include <bsd.port.subdir.mk>
