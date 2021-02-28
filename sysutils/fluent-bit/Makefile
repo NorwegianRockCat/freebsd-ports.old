@@ -3,7 +3,7 @@
 
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.6
+DISTVERSION=	1.7.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org
@@ -11,19 +11,20 @@ COMMENT=	Fast and lightweight data forwarder
 
 LICENSE=	APACHE20
 
+BROKEN_mips=		fails to build: conflicting types for 'restrict'
+BROKEN_mips64=		fails to build: conflicting types for 'restrict'
+BROKEN_riscv64=		fails to build: No support for this architecture (yet)
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	fluent
 
-BROKEN_mips=		fails to build: conflicting types for 'restrict'
-BROKEN_mips64=		fails to build: conflicting types for 'restrict'
-BROKEN_powerpc64=	fails to build: cast from pointer to integer of different size
-
-USES=		cmake:noninja gmake bison compiler
+USES=		cmake:noninja compiler:c11 gmake bison
 
 OPTIONS_DEFINE=		SSL PGSQL
 OPTIONS_DEFAULT=	SSL
 
-CMAKE_ARGS=		-DFLB_DEBUG=Off -DFLB_TRACE=Off -DFLB_CORO_STACK_SIZE=24576
+LDFLAGS=		-lexecinfo
+CMAKE_ARGS=		-DFLB_DEBUG=Off -DFLB_TRACE=Off
 
 SSL_USES=		ssl
 SSL_CMAKE_ON=		-DFLB_TLS=On
@@ -42,6 +43,10 @@ USE_RC_SUBR=	${PORTNAME}
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-lib_luajit__src__lj_prng.c
+.endif
+
+.if ${ARCH:Mpowerpc64*}
+CMAKE_ARGS+=	-DFLB_LUAJIT:BOOL=OFF
 .endif
 
 post-install:

@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	wayfire
-DISTVERSION=	0.6.0
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.7.0
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -11,7 +12,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-		wf-config>=0.6.0<0.7.0:devel/wf-config \
+		wf-config>=0.7.0<0.8.0:devel/wf-config \
 		${LOCALBASE}/include/xf86drmMode.h:graphics/libdrm \
 		wayland-protocols>=1.12:graphics/wayland-protocols \
 		glm>=0.9.8:math/glm \
@@ -48,5 +49,12 @@ post-patch:
 	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \
 		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
 		${WRKSRC}/meson.build
+
+post-install:
+	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.ini ${STAGEDIR}${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/wayland-sessions
+	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.desktop \
+		${STAGEDIR}${PREFIX}/share/wayland-sessions
 
 .include <bsd.port.mk>

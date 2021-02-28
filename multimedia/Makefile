@@ -10,6 +10,7 @@
     SUBDIR += aegisub
     SUBDIR += aom
     SUBDIR += aravis
+    SUBDIR += arcan
     SUBDIR += assimp
     SUBDIR += atomicparsley
     SUBDIR += audacious
@@ -51,6 +52,7 @@
     SUBDIR += dvd-slideshow
     SUBDIR += dvdauthor
     SUBDIR += dvdid
+    SUBDIR += dvdread
     SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
@@ -85,31 +87,6 @@
     SUBDIR += gpodder
     SUBDIR += grake
     SUBDIR += gst123
-    SUBDIR += gstreamer
-    SUBDIR += gstreamer-ffmpeg
-    SUBDIR += gstreamer-plugins
-    SUBDIR += gstreamer-plugins-all
-    SUBDIR += gstreamer-plugins-annodex
-    SUBDIR += gstreamer-plugins-bad
-    SUBDIR += gstreamer-plugins-bz2
-    SUBDIR += gstreamer-plugins-core
-    SUBDIR += gstreamer-plugins-dts
-    SUBDIR += gstreamer-plugins-dv
-    SUBDIR += gstreamer-plugins-dvd
-    SUBDIR += gstreamer-plugins-fluendo-mpegdemux
-    SUBDIR += gstreamer-plugins-gnonlin
-    SUBDIR += gstreamer-plugins-good
-    SUBDIR += gstreamer-plugins-mpeg2dec
-    SUBDIR += gstreamer-plugins-mpeg2enc
-    SUBDIR += gstreamer-plugins-resindvd
-    SUBDIR += gstreamer-plugins-schroedinger
-    SUBDIR += gstreamer-plugins-theora
-    SUBDIR += gstreamer-plugins-ugly
-    SUBDIR += gstreamer-plugins-v4l2
-    SUBDIR += gstreamer-plugins-vdpau
-    SUBDIR += gstreamer-plugins-vp8
-    SUBDIR += gstreamer-plugins-x264
-    SUBDIR += gstreamer-plugins-xvid
     SUBDIR += gstreamer1
     SUBDIR += gstreamer1-editing-services
     SUBDIR += gstreamer1-libav
@@ -156,6 +133,7 @@
     SUBDIR += gxine
     SUBDIR += handbrake
     SUBDIR += harvid
+    SUBDIR += hypnotix
     SUBDIR += imagination
     SUBDIR += intel-media-sdk
     SUBDIR += iriverter
@@ -237,6 +215,7 @@
     SUBDIR += linux-c7-libv4l
     SUBDIR += linux-tsmuxer
     SUBDIR += linux_dvbwrapper-kmod
+    SUBDIR += livego
     SUBDIR += lives
     SUBDIR += livestreamer
     SUBDIR += lsdvd
@@ -246,6 +225,7 @@
     SUBDIR += mediainfo
     SUBDIR += mencoder
     SUBDIR += mimms
+    SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
     SUBDIR += mkclean
@@ -335,7 +315,6 @@
     SUBDIR += py-ffmpeg-python
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
-    SUBDIR += py-kaa-base
     SUBDIR += py-librtmp
     SUBDIR += py-mido
     SUBDIR += py-mlt
@@ -355,6 +334,7 @@
     SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09
+    SUBDIR += qwinff
     SUBDIR += rage
     SUBDIR += rav1e
     SUBDIR += recmpeg
@@ -379,6 +359,7 @@
     SUBDIR += smplayer-themes
     SUBDIR += sms1xxx-kmod
     SUBDIR += smtube
+    SUBDIR += snapcast
     SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook

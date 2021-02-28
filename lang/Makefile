@@ -69,6 +69,7 @@
     SUBDIR += expect
     SUBDIR += f2c
     SUBDIR += fasm
+    SUBDIR += fennel
     SUBDIR += ferite
     SUBDIR += ficl
     SUBDIR += fpc
@@ -105,6 +106,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += gjs
+    SUBDIR += gleam
     SUBDIR += gnat_util
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
@@ -126,7 +128,6 @@
     SUBDIR += guile1
     SUBDIR += guile2
     SUBDIR += halide
-    SUBDIR += harbour
     SUBDIR += haskell-mode.el
     SUBDIR += hermes
     SUBDIR += hla
@@ -143,8 +144,6 @@
     SUBDIR += janet
     SUBDIR += jimtcl
     SUBDIR += jruby
-    SUBDIR += julia
-    SUBDIR += julia10
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
@@ -185,6 +184,9 @@
     SUBDIR += mmix
     SUBDIR += mono
     SUBDIR += mono-basic
+    SUBDIR += mono5.10
+    SUBDIR += mono5.20
+    SUBDIR += mono6.8
     SUBDIR += mosh
     SUBDIR += mosml
     SUBDIR += mtasc
@@ -255,8 +257,6 @@
     SUBDIR += pfe
     SUBDIR += pharo
     SUBDIR += php-mode.el
-    SUBDIR += php72
-    SUBDIR += php72-extensions
     SUBDIR += php73
     SUBDIR += php73-extensions
     SUBDIR += php74
@@ -328,6 +328,7 @@
     SUBDIR += sketchy
     SUBDIR += slib
     SUBDIR += slib-guile
+    SUBDIR += slib-guile1
     SUBDIR += slib-guile2
     SUBDIR += slisp
     SUBDIR += smalltalk
@@ -336,7 +337,6 @@
     SUBDIR += solidity
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey185
-    SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
     SUBDIR += spidermonkey60
     SUBDIR += spidermonkey78
@@ -344,6 +344,7 @@
     SUBDIR += squeak
     SUBDIR += squirrel
     SUBDIR += swi-pl
+    SUBDIR += tauthon
     SUBDIR += tcbasic
     SUBDIR += tcc
     SUBDIR += tcl-manual

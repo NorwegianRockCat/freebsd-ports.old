@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	netgen
-PORTVERSION=	6.2.2009
+PORTVERSION=	6.2.2101
 DISTVERSIONPREFIX=	v
 CATEGORIES=	cad
 
@@ -12,9 +12,8 @@ COMMENT=	Automatic 3D tetrahedral mesh generator
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=		amd64 # i386
-ONLY_FOR_ARCHS_REASON=	relies on rdtsc() call and the TSC is specific to x86 \
-			and pkg-fallout@ reports build errors with i386.
+ONLY_FOR_ARCHS=		amd64 i386
+ONLY_FOR_ARCHS_REASON=	relies on rdtsc() call and the TSC is specific to x86
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR} \
 		git:devel/git

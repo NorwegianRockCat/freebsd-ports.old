@@ -21,7 +21,6 @@
     SUBDIR += catdvi
     SUBDIR += cdlabelgen
     SUBDIR += cloud-print-connector
-    SUBDIR += cloudprint
     SUBDIR += cups
     SUBDIR += cups-bjnp
     SUBDIR += cups-cloud-print
@@ -90,7 +89,6 @@
     SUBDIR += html2ps
     SUBDIR += hyperlatex
     SUBDIR += indexinfo
-    SUBDIR += jabref
     SUBDIR += kde_poster
     SUBDIR += latex-beamer
     SUBDIR += latex-biber
@@ -109,6 +107,7 @@
     SUBDIR += libspectre
     SUBDIR += lilypond
     SUBDIR += lilypond-devel
+    SUBDIR += limereport
     SUBDIR += linux-c7-cups-libs
     SUBDIR += linux-c7-freetype
     SUBDIR += linux-c7-harfbuzz
@@ -166,6 +165,7 @@
     SUBDIR += pkfonts400
     SUBDIR += pkfonts600
     SUBDIR += pnm2ppa
+    SUBDIR += posterazor
     SUBDIR += print-manager
     SUBDIR += ps2eps
     SUBDIR += pscal
@@ -211,10 +211,13 @@
     SUBDIR += rubygem-prawn-flexible-table
     SUBDIR += rubygem-prawn-format
     SUBDIR += rubygem-prawn-graph
+    SUBDIR += rubygem-prawn-icon
     SUBDIR += rubygem-prawn-js
     SUBDIR += rubygem-prawn-layout
     SUBDIR += rubygem-prawn-security
     SUBDIR += rubygem-prawn-svg
+    SUBDIR += rubygem-prawn-table
+    SUBDIR += rubygem-prawn-templates
     SUBDIR += rubygem-prawn_shapes
     SUBDIR += rubygem-rbpdf
     SUBDIR += rubygem-rbpdf-font
@@ -254,7 +257,6 @@
     SUBDIR += txtbdf2ps
     SUBDIR += typetools
     SUBDIR += utopia
-    SUBDIR += xfce4-print
     SUBDIR += xmbibtex
     SUBDIR += xpdfopen
     SUBDIR += xreader

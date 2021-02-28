@@ -2,7 +2,7 @@
 
 PORTNAME=	gworkspace
 PORTVERSION=	0.9.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils gnustep
 #MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/
 MASTER_SITES=	GNUSTEP/usr-apps
@@ -25,6 +25,11 @@ PLIST_SUB+=	PDFVIEW="@comment "
 PLIST_SUB+=	PDFVIEW=""
 USES+=		ghostscript
 .endif
+
+post-patch:
+# Fix the build with -fno-common (for Clang 11 and GCC 10)
+	@${REINPLACE_CMD} -e '/serverConnection/s,^,extern ,' \
+		${WRKSRC}/Inspector/ContentViewers/ImageViewer/Resizer.h
 
 pre-configure:
 	${RM} -r ${WRKSRC}/GWMetadata

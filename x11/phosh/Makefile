@@ -2,7 +2,7 @@
 
 PORTNAME=	phosh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.0
+DISTVERSION=	0.8.1
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -27,11 +27,12 @@ USE_GITLAB=	yes
 USE_GNOME=	cairo gdkpixbuf2 gnomedesktop3
 GL_SITE=	https://source.puri.sm
 GL_ACCOUNT=	Librem5
-GL_COMMIT=	6c873426a8f74a4ee0bcd0c2746636ae7f85928e
+GL_COMMIT=	d048a5e1cce62ba5a8ccc8b14bdd740eaf619825
 GL_TUPLE=	https://gitlab.gnome.org:GNOME:libgnome-volume-control:ae1a34aafce7026b8c0f65a43c9192d756fe1057:gvc/subprojects/gvc
 SHEBANG_FILES=	build-aux/post_install.py
 MESON_ARGS=	-Dgvc:alsa=false
-GLIB_SCHEMAS=	sm.puri.phosh.enums.xml \
+GLIB_SCHEMAS=	00_sm.puri.Phosh.gschema.override \
+		sm.puri.phosh.enums.xml \
 		sm.puri.phosh.gschema.xml
 
 post-patch:

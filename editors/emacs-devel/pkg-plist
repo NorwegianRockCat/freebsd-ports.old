@@ -195,6 +195,7 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/etc/emacs.service
 %%DATADIR%%/%%EMACS_VER%%/etc/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/etc/enriched.txt
+%%DATADIR%%/%%EMACS_VER%%/etc/facemenu-removal.txt
 %%DATADIR%%/%%EMACS_VER%%/etc/forms/README
 %%DATADIR%%/%%EMACS_VER%%/etc/forms/forms-d2.dat
 %%DATADIR%%/%%EMACS_VER%%/etc/forms/forms-d2.el
@@ -1613,6 +1614,8 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/lisp.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/macroexp.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/macroexp.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/memory-report.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/memory-report.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/map-ynp.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/map-ynp.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/emacs-lisp/map.el.gz
@@ -2406,6 +2409,8 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/ZOZY.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/arabic.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/arabic.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/cham.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/cham.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/compose.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/compose.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/croatian.el.gz
@@ -2684,6 +2689,10 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/browse-url.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/dbus.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/dbus.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/dictionary-connection.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/dictionary-connection.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/dictionary.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/net/dictionary.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/dig.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/dig.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/net/dns.el.gz
@@ -3206,6 +3215,8 @@ share/metainfo/emacs.appdata.xml
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-plot.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-protocol.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-protocol.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/org/org-refile.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/org/org-refile.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-src.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-src.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/org-table.el.gz

@@ -11,7 +11,7 @@ COMMENT?=	Java Development Kit ${JDK_MAJOR_VERSION}
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 BUILD_DEPENDS=	zip:archivers/zip \
 		autoconf>0:devel/autoconf \
@@ -51,8 +51,8 @@ INSTALLDIR=	${PREFIX}/${PKGBASE}
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	275
-JDK_BUILD_NUMBER=	01
+JDK_UPDATE_VERSION=	282
+JDK_BUILD_NUMBER=	08
 BSD_JDK_VERSION=	1
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -193,7 +193,7 @@ CONFIGURE_ARGS+=	--disable-jfr
 MAKE_ENV+=	LFLAGS="-Wl,-z,notext"
 .endif
 
-.if ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == powerpc64
+.if ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH:Mpowerpc64*}
 JDK_BUILD_JVM=	server
 .else
 JDK_BUILD_JVM=	zero
@@ -222,6 +222,11 @@ MAKE_ARGS+=	USE_PRECOMPILED_HEADER=0
 
 .if ${ARCH} == powerpc64
 CONFIGURE_ARGS+=	--disable-jfr
+.endif
+
+.if ${ARCH} == powerpc64le
+CONFIGURE_ARGS+=	--disable-jfr
+MAKE_ARGS+=	USE_PRECOMPILED_HEADER=0
 .endif
 
 .if empty(ICONV_LIB)
@@ -289,15 +294,15 @@ do-install:
 	${FIND} bin jre/bin -type f -exec ${CHMOD} ${BINMODE} {} \; && \
 	${CHMOD} ${BINMODE} jre/${JDK_JVMDIR}/jexec \
 	    jre/${JDK_JVMDIR}/jspawnhelper ${JDK_JVMDIR}/jexec
-	@${ECHO} "@dir ${INSTALLDIR}/jre/lib/applet" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir ${INSTALLDIR}/jre/lib/applet" >> ${TMPPLIST}
 .else
 	@cd ${JRE_IMAGEDIR} && ${COPYTREE_SHARE} . ${STAGEDIR}${INSTALLDIR}
 	@cd ${STAGEDIR}${INSTALLDIR} && \
 	${FIND} bin -type f -exec ${CHMOD} ${BINMODE} {} \; && \
 	${CHMOD} ${BINMODE} ${JDK_JVMDIR}/jexec ${JDK_JVMDIR}/jspawnhelper
-	@${ECHO} "@dir ${INSTALLDIR}/lib/applet" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir ${INSTALLDIR}/lib/applet" >> ${TMPPLIST}
 .endif
-	@${ECHO} "@javavm ${INSTALLDIR}/bin/java" >> ${TMPPLIST}
+	@${ECHO_CMD} "@javavm ${INSTALLDIR}/bin/java" >> ${TMPPLIST}
 	@${FIND} ${STAGEDIR}${INSTALLDIR} -not -type d | ${SORT} | \
 	    ${SED} -e 's|^${STAGEDIR}${PREFIX}/||' >> ${TMPPLIST}
 

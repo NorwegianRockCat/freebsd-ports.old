@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	nginx
-PORTVERSION=	1.19.5
+PORTVERSION=	1.19.7
 PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -233,10 +233,6 @@ IGNORE=		requires at least HTTP or MAIL to \
 
 .if !${PORT_OPTIONS:MHTTP_REWRITE} && !defined(USE_HTTP_REWRITE)
 PKGNAMESUFFIX:=	${PKGNAMESUFFIX}-nopcre
-.endif
-
-.if ${PORT_OPTIONS:MKTLS}
-CFLAGS+=	-DNGX_SSL_SENDFILE
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER} && empty(PORT_OPTIONS:MDEBUG)

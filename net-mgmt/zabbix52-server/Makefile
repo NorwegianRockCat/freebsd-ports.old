@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	zabbix52
-PORTVERSION=	5.2.1
+DISTVERSION=	5.2.4
 PORTREVISION?=	0
 CATEGORIES=	net-mgmt
-MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${PORTVERSION:R}/
+MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
-DISTNAME=	zabbix-${PORTVERSION}
+DISTNAME=	zabbix-${DISTVERSION}
 
 MAINTAINER=	pg@pakhom.spb.ru
 COMMENT=	Enterprise-class open source distributed monitoring (${PKGNAMESUFFIX:S/^-//})
@@ -51,7 +51,7 @@ PLIST_FILES+=	bin/zabbix_js
 PLIST_SUB+=	SERVER="@comment "
 .endif
 
-PLIST_SUB+=	ZABBIX_BUILD=${ZABBIX_BUILD} PORTVERSION=${PORTVERSION}
+PLIST_SUB+=	ZABBIX_BUILD=${ZABBIX_BUILD} DISTVERSION=${DISTVERSION}
 SUB_LIST=	ZABBIX_BUILD=${ZABBIX_BUILD}
 
 MAKE_ARGS+=	ARCH=freebsd
@@ -127,6 +127,10 @@ NMAP_RUN_DEPENDS=	nmap:security/nmap \
 
 LIBXML2_CONFIGURE_WITH=	libxml2=${LOCALBASE}
 LIBXML2_LIB_DEPENDS=	libxml2.so:textproc/libxml2
+
+MODBUS_DESC=		Support for Modbus checks
+MODBUS_CONFIGURE_WITH=	libmodbus
+MODBUS_LIB_DEPENDS=	libmodbus.so:comms/libmodbus
 
 OPENSSL_CONFIGURE_WITH=	openssl
 OPENSSL_USES=		ssl

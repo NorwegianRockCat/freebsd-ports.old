@@ -3,7 +3,7 @@
 
 PORTNAME=	sage
 PORTVERSION=	9.2
-PORTREVISION=	1
+PORTREVISION=	8
 CATEGORIES=	math
 MASTER_SITES=	https://mirrors.xmission.com/sage/src/		\
 		http://mirrors.xmission.com/sage/src/		\
@@ -58,7 +58,7 @@ BUILD_DEPENDS=	bash:shells/bash		\
 		${PYTHON_PKGNAMEPREFIX}jupyter_core>0:devel/py-jupyter_core@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}jupyter_client>0:devel/py-jupyter_client@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}kiwisolver>0:math/py-kiwisolver@${PY_FLAVOR}\
-		${PYTHON_PKGNAMEPREFIX}MarkupSafe>0:textproc/py-MarkupSafe@${PY_FLAVOR}\
+		${PYTHON_PKGNAMEPREFIX}markupsafe>0:textproc/py-markupsafe@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}mistune>0:textproc/py-mistune@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}mpmath>0:math/py-mpmath@${PY_FLAVOR}\
@@ -78,7 +78,7 @@ BUILD_DEPENDS=	bash:shells/bash		\
 		${PYTHON_PKGNAMEPREFIX}pkgconfig>0:devel/py-pkgconfig@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}pplpy>0:math/py-pplpy@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}prometheus-client>0:net-mgmt/py-prometheus-client@${PY_FLAVOR}\
-		${PYTHON_PKGNAMEPREFIX}prompt_toolkit>0:devel/py-prompt_toolkit@${PY_FLAVOR}\
+		${PYTHON_PKGNAMEPREFIX}prompt-toolkit>0:devel/py-prompt-toolkit@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}ptyprocess>0:sysutils/py-ptyprocess@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}pybind11>0:devel/py-pybind11@${PY_FLAVOR}\
@@ -256,7 +256,7 @@ RUN_DEPENDS=	bash:shells/bash		\
 		${PYTHON_PKGNAMEPREFIX}jupyter_core>0:devel/py-jupyter_core@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}jupyter_client>0:devel/py-jupyter_client@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}kiwisolver>0:math/py-kiwisolver@${PY_FLAVOR}\
-		${PYTHON_PKGNAMEPREFIX}MarkupSafe>0:textproc/py-MarkupSafe@${PY_FLAVOR}\
+		${PYTHON_PKGNAMEPREFIX}markupsafe>0:textproc/py-markupsafe@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}mistune>0:textproc/py-mistune@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}mpmath>0:math/py-mpmath@${PY_FLAVOR}\
@@ -276,7 +276,7 @@ RUN_DEPENDS=	bash:shells/bash		\
 		${PYTHON_PKGNAMEPREFIX}pkgconfig>0:devel/py-pkgconfig@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}pplpy>0:math/py-pplpy@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}prometheus-client>0:net-mgmt/py-prometheus-client@${PY_FLAVOR}\
-		${PYTHON_PKGNAMEPREFIX}prompt_toolkit>0:devel/py-prompt_toolkit@${PY_FLAVOR}\
+		${PYTHON_PKGNAMEPREFIX}prompt-toolkit>0:devel/py-prompt-toolkit@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}ptyprocess>0:sysutils/py-ptyprocess@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}pybind11>0:devel/py-pybind11@${PY_FLAVOR}\
@@ -341,7 +341,7 @@ RUN_DEPENDS=	bash:shells/bash		\
 
 USES=		autoreconf blaslapack:openblas compiler:c++11-lib fortran	\
 		gettext gmake gnome iconv jpeg libtool localbase ncurses perl5	\
-		pkgconfig python:3.6+ readline shebangfix sqlite tk xorg
+		pkgconfig python:3.7+ readline shebangfix sqlite tk xorg
 USE_TEX=	latex:build pdftex:build tex:build
 USE_XORG=	x11 xext xscrnsaver
 USE_GNOME=	cairo glib20 pango

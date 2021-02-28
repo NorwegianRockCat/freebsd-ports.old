@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	valentina
-DISTVERSION=	0.7.38
+DISTVERSION=	0.7.44
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,7 +18,7 @@ USE_LDCONFIG=	yes
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	smart-pattern
-GL_COMMIT=	3c7f565d861f14ebd95cdc891a80d1d694aa3f81
+GL_COMMIT=	c10611605b19a2f82a651830cb1f49b90f7267ad
 
 DOS2UNIX_FILES=	src/libs/vgeometry/vellipticalarc.cpp
 

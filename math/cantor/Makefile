@@ -1,7 +1,10 @@
 # $FreeBSD$
 
+# TODO: ensure only ${PYTON_CMD} is pixked again
+
 PORTNAME=	cantor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -58,7 +61,5 @@ CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_PythonLibs
 post-patch:
 	${REINPLACE_CMD} -e '/FIND_PROGRAM(_GFORTRAN_EXECUTABLE/s,gfortran,${FC},' \
 		${WRKSRC}/cmake/FindR.cmake
-	${REINPLACE_CMD} -e 's|%%PYTHON_VER%%|${PYTHON_VER}|g' \
-		${WRKSRC}/cmake/FindPythonLibs3.cmake
 
 .include <bsd.port.mk>

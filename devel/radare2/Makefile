@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	radare2
-DISTVERSION=	4.5.1
+DISTVERSION=	5.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	swills@FreeBSD.org
@@ -11,7 +11,7 @@ COMMENT=	Tools to disasm, debug, analyze, and manipulate binary files
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NOT_FOR_ARCHS=		armv6 armv7 mips mips64 powerpc powerpc64 powerpc64le powerpcspe sparc64
+NOT_FOR_ARCHS=		armv6 armv7 mips mips64 powerpc powerpc64 powerpc64le powerpcspe riscv64 sparc64
 NOT_FOR_ARCHS_REASON=	does not build: Unsupported BSD architecture
 
 LIB_DEPENDS=	libcapstone.so:devel/capstone4
@@ -21,6 +21,7 @@ USE_GITHUB=		yes
 USE_LDCONFIG=		yes
 
 CONFIGURE_ARGS=	--with-syscapstone
+CFLAGS+=		-I${PREFIX}/include/capstone
 GH_ACCOUNT=		radare
 PATHFIX_MAKEFILEIN=	Makefile
 GNU_CONFIGURE=		yes

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	phpstorm
-PORTVERSION=	2020.2.3
+PORTVERSION=	2020.3.2
 CATEGORIES=	devel java
 MASTER_SITES=	https://download-cf.jetbrains.com/webide/
 PKGNAMEPREFIX=	jetbrains-
@@ -18,21 +18,21 @@ LICENSE_TEXT=	See: https://www.jetbrains.com/store/license.html
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
 RUN_DEPENDS=	intellij-fsnotifier>0:java/intellij-fsnotifier \
+		intellij-pty4j>=0.11.4:java/intellij-pty4j \
 		lsof:sysutils/lsof
 
 USES=		python:run shebangfix
 
 USE_JAVA=	yes
-JAVA_VERSION=	8+
+JAVA_VERSION=	11+
 
 SHEBANG_FILES=	bin/printenv.py bin/restart.py
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}/PhpStorm-202.7660.42
-
 SUB_FILES=	phpstorm phpstorm.desktop pkg-message
+
+WRKSRC=		${WRKDIR}/PhpStorm-203.7148.74
 
 do-install:
 # Linux/Windows/OS X only so remove them
@@ -51,8 +51,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/phpstorm.desktop ${STAGEDIR}${PREFIX}/share/applications/
 # Use fsnotifier replacement provided by java/intellij-fsnotifier
 	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/intellij/bin/fsnotifier" >> ${STAGEDIR}${DATADIR}/bin/idea.properties
-# Fix slow render
-	${ECHO} "-Dsun.java2d.xrender=false" >> ${STAGEDIR}${DATADIR}/bin/phpstorm.vmoptions
-	${ECHO} "-Dsun.java2d.xrender=false" >> ${STAGEDIR}${DATADIR}/bin/phpstorm64.vmoptions
+# Use pty4j replacement provided by java/intellij-pty4j
+	${LN} -sf ../../../intellij/lib/libpty ${STAGEDIR}${DATADIR}/lib/pty4j-native
 
 .include <bsd.port.mk>

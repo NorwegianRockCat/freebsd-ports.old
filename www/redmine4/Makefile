@@ -3,7 +3,7 @@
 
 PORTNAME=	redmine
 PORTVERSION=	4.1.1
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	https://www.redmine.org/releases/
 PKGNAMESUFFIX=	4
@@ -14,12 +14,8 @@ COMMENT=	Flexible project management web application
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/COPYING
 
-# It seems that redmine should work with ruby 2.7 but they have not enable it in gemfile
-# https://www.redmine.org/issues/31500
-BROKEN_RUBY27=	yes
-
 RUN_DEPENDS=	rubygem-bundler>=1.5.0:sysutils/rubygem-bundler \
-		rubygem-rails52>=5.2.4.4:www/rubygem-rails52 \
+		rubygem-rails52>=5.2.4.2<5.2.5:www/rubygem-rails52 \
 		rubygem-rouge312>=3.12.0:textproc/rubygem-rouge312 \
 		rubygem-request_store14>=1.0.5:devel/rubygem-request_store14 \
 		rubygem-mini_mime>=1.0.1:mail/rubygem-mini_mime \

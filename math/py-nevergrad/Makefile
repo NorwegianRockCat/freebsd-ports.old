@@ -4,7 +4,7 @@
 PORTNAME=	nevergrad
 PORTVERSION=	0.4.2
 DISTVERSIONSUFFIX=	.post2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bayesian-optimization>=1.2.0:math/py-bayesian-optimization@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cma>=2.6.0:math/py-cma@${PY_FLAVOR} \
-		${PYNUMPY}
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.15.0,1:math/py-numpy@${PY_FLAVOR}
 
 USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
@@ -34,7 +34,8 @@ BENCHMARK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gym>=0.12.1:math/py-gym@${PY_FLAVO
 			${PYTHON_PKGNAMEPREFIX}matplotlib>=2.2.3:math/py-matplotlib@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}mixsimulator>=0.2.9.5:math/py-mixsimulator@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pandas>=0.23.4,1:math/py-pandas@${PY_FLAVOR} \
-			${PY_PILLOW} \
+			${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}Pyomo>=5.7:math/py-Pyomo@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pyproj>=2.6.1:graphics/py-pyproj@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>=2.21.0:www/py-requests@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}tqdm>=0:misc/py-tqdm@${PY_FLAVOR} \

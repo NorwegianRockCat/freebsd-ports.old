@@ -14,6 +14,7 @@ include/folly/CancellationToken.h
 include/folly/Chrono.h
 include/folly/ClockGettimeWrappers.h
 include/folly/ConcurrentBitSet.h
+include/folly/ConcurrentLazy.h
 include/folly/ConcurrentSkipList-inl.h
 include/folly/ConcurrentSkipList.h
 include/folly/ConstexprMath.h
@@ -198,6 +199,7 @@ include/folly/executors/IOObjectCache.h
 include/folly/executors/IOThreadPoolExecutor.h
 include/folly/executors/InlineExecutor.h
 include/folly/executors/ManualExecutor.h
+include/folly/executors/MeteredExecutor.h
 include/folly/executors/QueuedImmediateExecutor.h
 include/folly/executors/ScheduledExecutor.h
 include/folly/executors/SequencedExecutor.h
@@ -267,17 +269,18 @@ include/folly/experimental/coro/Accumulate.h
 include/folly/experimental/coro/AsyncGenerator.h
 include/folly/experimental/coro/AsyncPipe.h
 include/folly/experimental/coro/AsyncScope.h
+include/folly/experimental/coro/AsyncStack.h
 include/folly/experimental/coro/Baton.h
 include/folly/experimental/coro/BlockingWait.h
 include/folly/experimental/coro/Collect-inl.h
 include/folly/experimental/coro/Collect.h
 include/folly/experimental/coro/Concat-inl.h
 include/folly/experimental/coro/Concat.h
+include/folly/experimental/coro/Coroutine.h
 include/folly/experimental/coro/CurrentExecutor.h
 include/folly/experimental/coro/Dematerialize-inl.h
 include/folly/experimental/coro/Dematerialize.h
 include/folly/experimental/coro/DetachOnCancel.h
-include/folly/experimental/coro/Error.h
 include/folly/experimental/coro/Filter-inl.h
 include/folly/experimental/coro/Filter.h
 include/folly/experimental/coro/FutureUtil.h
@@ -292,6 +295,7 @@ include/folly/experimental/coro/Merge.h
 include/folly/experimental/coro/Multiplex-inl.h
 include/folly/experimental/coro/Multiplex.h
 include/folly/experimental/coro/Mutex.h
+include/folly/experimental/coro/Result.h
 include/folly/experimental/coro/Retry.h
 include/folly/experimental/coro/SharedLock.h
 include/folly/experimental/coro/SharedMutex.h
@@ -478,6 +482,8 @@ include/folly/io/async/DelayedDestruction.h
 include/folly/io/async/DelayedDestructionBase.h
 include/folly/io/async/DestructorCheck.h
 include/folly/io/async/EventBase.h
+include/folly/io/async/EventBaseAtomicNotificationQueue-inl.h
+include/folly/io/async/EventBaseAtomicNotificationQueue.h
 include/folly/io/async/EventBaseBackendBase.h
 include/folly/io/async/EventBaseLocal.h
 include/folly/io/async/EventBaseManager.h
@@ -579,6 +585,7 @@ include/folly/memory/MallctlHelper.h
 include/folly/memory/Malloc.h
 include/folly/memory/MemoryResource.h
 include/folly/memory/ReentrantAllocator.h
+include/folly/memory/SanitizeAddress.h
 include/folly/memory/SanitizeLeak.h
 include/folly/memory/ThreadCachedArena.h
 include/folly/memory/UninitializedMemoryHacks.h
@@ -598,6 +605,8 @@ include/folly/portability/Constexpr.h
 include/folly/portability/Dirent.h
 include/folly/portability/Event.h
 include/folly/portability/Fcntl.h
+include/folly/portability/Filesystem.h
+include/folly/portability/FmtCompile.h
 include/folly/portability/GFlags.h
 include/folly/portability/GMock.h
 include/folly/portability/GTest.h
@@ -630,6 +639,7 @@ include/folly/portability/Windows.h
 include/folly/python/AsyncioExecutor.h
 include/folly/python/async_generator.h
 include/folly/python/coro.h
+include/folly/python/error.h
 include/folly/python/executor.h
 include/folly/python/futures.h
 include/folly/python/iobuf.h
@@ -674,6 +684,7 @@ include/folly/synchronization/AtomicUtil-inl.h
 include/folly/synchronization/AtomicUtil.h
 include/folly/synchronization/Baton.h
 include/folly/synchronization/CallOnce.h
+include/folly/synchronization/DelayedInit.h
 include/folly/synchronization/DistributedMutex-inl.h
 include/folly/synchronization/DistributedMutex.h
 include/folly/synchronization/DistributedMutexSpecializations.h

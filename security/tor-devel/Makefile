@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tor
-DISTVERSION=	0.4.5.2-alpha
+DISTVERSION=	0.4.5.5-rc
 CATEGORIES=	security net
 MASTER_SITES=	TOR
 PKGNAMESUFFIX=	-devel
@@ -110,6 +110,10 @@ LIB_DEPENDS+=		libtcmalloc.so:devel/google-perftools
 .endif
 
 PORTSCOUT=		limit:^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-[a-z].*$$
+
+.if ${SSL_DEFAULT:Mlibressl*}
+BROKEN=		Libressl 3.2.1 with compatibility issues to Tor relays: https://gitlab.torproject.org/tpo/core/tor/-/issues/40128
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -E -e "s@(-z) (relro|now)@-Wl,\1,\2@g" \

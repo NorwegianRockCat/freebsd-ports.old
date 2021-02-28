@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.22
+DISTVERSION=	6.3
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
-		http://mirrors.ibiblio.org/wine/source/5.x/
+		http://mirrors.ibiblio.org/wine/source/6.x/
 PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -19,12 +19,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
-		prelink:sysutils/prelink
+BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex
 LIB_DEPENDS=	libFAudio.so:audio/faudio \
 		libxml2.so:textproc/libxml2
 
 USES=		bison desktop-file-utils gmake localbase pkgconfig shebangfix tar:xz
+USE_GCC=	yes
 
 CONFLICTS_INSTALL=	wine-[0-9]* i386-wine-[0-9]* i386-wine-devel-[0-9]*
 
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gphoto --without-gsm --without-gstreamer \
 		--without-inotify \
 		--without-krb5 \
+		--without-mingw \
 		--without-opencl \
 		--without-osmesa \
 		--with-oss \
@@ -58,14 +59,14 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GCC GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
-OPTIONS_DEFAULT=GCC GNUTLS X11
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
+OPTIONS_DEFAULT=GNUTLS X11
 OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
 SDL_DESC=	Use SDL for gamepad support (XInput only)
-STAGING_DESC=	Include the Wine Staging patchset (experimental)
+STAGING_DESC=	Include Wine Staging patchset (experimental&unsupported)
 VKD3D_DESC=	Direct3D 12 support via Vulkan
 VULKAN_DESC=	Vulkan API support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
@@ -77,16 +78,10 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
 DOSBOX_RUN_DEPENDS=	dosbox:emulators/dosbox
 
-GCC_USE=		gcc=yes
-GCC_USES_OFF=		compiler:c11
-
-GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.1-x86.msi:emulators/wine-gecko-devel
+GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.2-x86.msi:emulators/wine-gecko-devel
 
 GNUTLS_CONFIGURE_WITH=	gnutls
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
-
-HAL_CONFIGURE_WITH=	hal
-HAL_LIB_DEPENDS=	libhal.so:sysutils/hal
 
 LDAP_CONFIGURE_WITH=	ldap
 LDAP_USE=		OPENLDAP=yes
@@ -94,7 +89,7 @@ LDAP_USE=		OPENLDAP=yes
 LIBXSLT_CONFIGURE_WITH=	xslt
 LIBXSLT_LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-5.1.1-x86.msi:emulators/wine-mono-devel
+MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-6.0.0-x86.msi:emulators/wine-mono-devel
 
 MPG123_CONFIGURE_WITH=	mpg123
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
@@ -113,7 +108,6 @@ STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
 				git:devel/git \
 				autoconf>0:devel/autoconf
 STAGING_LIB_DEPENDS=	libtxc_dxtn.so:graphics/s2tc
-STAGING_EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-dlls-ntdll-unix-file.c
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
@@ -127,7 +121,7 @@ VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
 WINEMAKER_RUN_DEPENDS=	p5-XML-LibXML>0:textproc/p5-XML-LibXML
 
-X11_CONFIGURE_WITH=	x cms fontconfig freetype glu jpeg opengl png xinerama xinput2 xrandr xrender
+X11_CONFIGURE_WITH=	x cms fontconfig freetype jpeg opengl png xinerama xinput2 xrandr xrender
 X11_USES=		gl jpeg xorg
 X11_USE=		GL=glu XORG=x11,xext,xcomposite,xcursor,xi,xinerama,xrandr,xrender
 X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \

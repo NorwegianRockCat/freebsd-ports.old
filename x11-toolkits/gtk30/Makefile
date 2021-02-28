@@ -4,8 +4,7 @@
 # adwaita-icon-theme, gnome-themes-standard and mate-themes
 
 PORTNAME=	gtk
-PORTVERSION=	3.24.23
-PORTREVISION=	2
+PORTVERSION=	3.24.24
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMESUFFIX=	3
@@ -39,7 +38,7 @@ CPPFLAGS+=	-fno-omit-frame-pointer
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.2404.19
+LIBVERSION=	0.2404.20
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
@@ -79,8 +78,7 @@ DEBUG_CONFIGURE_ON=	--enable-debug=yes
 
 WAYLAND_DESC=		GDK Wayland backend
 WAYLAND_CONFIGURE_ENABLE=	wayland-backend
-WAYLAND_BUILD_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols \
-			v4l_compat>=0:multimedia/v4l_compat
+WAYLAND_BUILD_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland \
 			libxkbcommon.so:x11/libxkbcommon
 WAYLAND_RUN_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols
