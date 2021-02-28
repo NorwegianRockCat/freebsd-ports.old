@@ -1184,13 +1184,13 @@ show-unsupported-system-error:
 _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 # Sanity checks for chroot/jail building.
 # Skip if OSVERSION specified on cmdline for testing. Only works for bmake.
-.if !defined(.MAKEOVERRIDES) || !${.MAKEOVERRIDES:MOSVERSION}
-.if ${_OSVERSION_MAJOR} != ${_OSRELEASE:R}
-.error UNAME_r (${_OSRELEASE}) and OSVERSION (${OSVERSION}) do not agree on major version number.
-.elif ${_OSVERSION_MAJOR} != ${OSREL:R}
-.error OSREL (${OSREL}) and OSVERSION (${OSVERSION}) do not agree on major version number.
-.endif
-.endif
+#.if !defined(.MAKEOVERRIDES) || !${.MAKEOVERRIDES:MOSVERSION}
+#.if ${_OSVERSION_MAJOR} != ${_OSRELEASE:R}
+#.error UNAME_r (${_OSRELEASE}) and OSVERSION (${OSVERSION}) do not agree on major version number.
+#.elif ${_OSVERSION_MAJOR} != ${OSREL:R}
+#.error OSREL (${OSREL}) and OSVERSION (${OSVERSION}) do not agree on major version number.
+#.endif
+#.endif
 
 # Only define tools here (for transition period with between pkg tools)
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
