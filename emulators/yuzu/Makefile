@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20210222
+PORTVERSION=	s20210324
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -18,8 +18,6 @@ PATCHFILES+=	9b429b84617c.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5896
 PATCHFILES+=	cc4650cc8a84.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5896
 PATCHFILES+=	4233c859a602.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5896
 PATCHFILES+=	c8880a62d365.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5896
-PATCHFILES+=	71526ecfc743.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5984
-PATCHFILES+=	1841ca4b9b7b.patch:-p1 # https://github.com/yuzu-emu/yuzu/pull/5984
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
@@ -47,11 +45,11 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	ae876ed04
-GH_TUPLE=	DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
+GH_TAGNAME=	65774084f
+GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-52-geac2416b8:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
 		KhronosGroup:Vulkan-Headers:v1.2.145:Vulkan_Headers/externals/Vulkan-Headers \
-		MerryMage:dynarmic:r4-106-gcafa6876:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:r4-176-g646fd059:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:eefca56:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
@@ -101,6 +99,12 @@ QT5_PLIST_FILES=bin/${PORTNAME} \
 
 VULKAN_DESC=		Vulkan renderer
 VULKAN_RUN_DEPENDS=	${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
+
+.if !exists(${.CURDIR:H:H}/www/qt5-webengine)
+# Temporarily disable web applet if qt5-webengine is missing
+QT5_USE:=		${QT5_USE:S/,webengine//}
+QT5_CMAKE_BOOL:=	${QT5_CMAKE_BOOL:N*WEB_ENGINE}
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/check_submodules_present()/d' \

@@ -36,6 +36,7 @@
     SUBDIR += UCD
     SUBDIR += adabrowse
     SUBDIR += add-css-links
+    SUBDIR += addts
     SUBDIR += af-aspell
     SUBDIR += aft
     SUBDIR += agrep
@@ -251,6 +252,7 @@
     SUBDIR += gu-aspell
     SUBDIR += gutenmark
     SUBDIR += gv-aspell
+    SUBDIR += halibut
     SUBDIR += heirloom-doctools
     SUBDIR += hevea
     SUBDIR += hhm
@@ -690,6 +692,7 @@
     SUBDIR += p5-Pod-MinimumVersion
     SUBDIR += p5-Pod-POM
     SUBDIR += p5-Pod-POM-View-HTML-Filter
+    SUBDIR += p5-Pod-POM-View-Restructured
     SUBDIR += p5-Pod-Parser
     SUBDIR += p5-Pod-Perldoc
     SUBDIR += p5-Pod-ProjectDocs
@@ -896,6 +899,7 @@
     SUBDIR += p5-Text-Netstring
     SUBDIR += p5-Text-Ngram
     SUBDIR += p5-Text-Ngrams
+    SUBDIR += p5-Text-NonWideChar-Util
     SUBDIR += p5-Text-Original
     SUBDIR += p5-Text-Padding
     SUBDIR += p5-Text-ParagraphDiff
@@ -930,10 +934,13 @@
     SUBDIR += p5-Text-Table-HTML-DataTables
     SUBDIR += p5-Text-Table-LTSV
     SUBDIR += p5-Text-Table-Manifold
+    SUBDIR += p5-Text-Table-More
     SUBDIR += p5-Text-Table-Org
     SUBDIR += p5-Text-Table-Paragraph
+    SUBDIR += p5-Text-Table-Sprintf
     SUBDIR += p5-Text-Table-TSV
     SUBDIR += p5-Text-Table-Tiny
+    SUBDIR += p5-Text-Table-TinyBorderStyle
     SUBDIR += p5-Text-Table-TinyColor
     SUBDIR += p5-Text-Table-TinyColorWide
     SUBDIR += p5-Text-Table-TinyWide
@@ -952,6 +959,7 @@
     SUBDIR += p5-Text-Typography
     SUBDIR += p5-Text-Unaccent
     SUBDIR += p5-Text-Unaccent-PurePerl
+    SUBDIR += p5-Text-UnicodeBox
     SUBDIR += p5-Text-VimColor
     SUBDIR += p5-Text-VisualWidth
     SUBDIR += p5-Text-WideChar-Util
@@ -1265,6 +1273,7 @@
     SUBDIR += py-elasticsearch-async
     SUBDIR += py-elasticsearch-curator
     SUBDIR += py-elasticsearch-dsl
+    SUBDIR += py-elasticsearch-dsl6
     SUBDIR += py-elasticsearch5
     SUBDIR += py-elasticsearch6
     SUBDIR += py-elementpath
@@ -1330,6 +1339,7 @@
     SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
     SUBDIR += py-openstackdocstheme
+    SUBDIR += py-orange3-text
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
@@ -1486,6 +1496,7 @@
     SUBDIR += re_graph
     SUBDIR += redet
     SUBDIR += redisearch
+    SUBDIR += redisearch16
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb

@@ -167,6 +167,7 @@
     SUBDIR += freerdp
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
+    SUBDIR += frp
     SUBDIR += frr7
     SUBDIR += frr7-pythontools
     SUBDIR += fspclient
@@ -240,6 +241,7 @@
     SUBDIR += hlmaster
     SUBDIR += honeyd
     SUBDIR += hostapd
+    SUBDIR += hostapd-devel
     SUBDIR += hping
     SUBDIR += hping3
     SUBDIR += hsflowd
@@ -523,6 +525,7 @@
     SUBDIR += nyancat
     SUBDIR += nylon
     SUBDIR += ocserv
+    SUBDIR += oha
     SUBDIR += olsrd
     SUBDIR += omnitty
     SUBDIR += onedrive
@@ -545,6 +548,7 @@
     SUBDIR += opennx
     SUBDIR += openpgm
     SUBDIR += openradius
+    SUBDIR += openrsync
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -1016,6 +1020,7 @@
     SUBDIR += py-eventlet
     SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gdown
+    SUBDIR += py-geopy
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-h11
@@ -1118,6 +1123,7 @@
     SUBDIR += py-tofu
     SUBDIR += py-transip
     SUBDIR += py-trio
+    SUBDIR += py-tweepy
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
@@ -1244,6 +1250,7 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
+    SUBDIR += rubygem-gitlab-fog-google
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1290,6 +1297,7 @@
     SUBDIR += rubygem-omniauth-auth0
     SUBDIR += rubygem-omniauth-auth014
     SUBDIR += rubygem-omniauth-authentiq
+    SUBDIR += rubygem-omniauth-azure-activedirectory-v2
     SUBDIR += rubygem-omniauth-azure-oauth2
     SUBDIR += rubygem-omniauth-facebook
     SUBDIR += rubygem-omniauth-facebook4
@@ -1524,6 +1532,8 @@
     SUBDIR += widentd
     SUBDIR += wireguard
     SUBDIR += wireguard-go
+    SUBDIR += wireguard-kmod
+    SUBDIR += wireguard-tools
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wlan2eth

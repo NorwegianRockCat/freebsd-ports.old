@@ -203,6 +203,8 @@
     SUBDIR += mailgraph
     SUBDIR += mailhog
     SUBDIR += mailman
+    SUBDIR += mailman-exim4
+    SUBDIR += mailman-postfix
     SUBDIR += mailman3
     SUBDIR += mailscanner
     SUBDIR += mailsync
@@ -496,9 +498,11 @@
     SUBDIR += py-flask-mail
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
+    SUBDIR += py-imapclient
     SUBDIR += py-mail-parser
     SUBDIR += py-mailmanclient
     SUBDIR += py-mailnag
+    SUBDIR += py-mailsuite
     SUBDIR += py-managesieve3
     SUBDIR += py-milter
     SUBDIR += py-notmuch
@@ -633,6 +637,7 @@
     SUBDIR += spamass-milter
     SUBDIR += spamass-rules
     SUBDIR += spamassassin
+    SUBDIR += spamassassin-devel
     SUBDIR += spamassassin-dqs
     SUBDIR += spambnc
     SUBDIR += spamcup
